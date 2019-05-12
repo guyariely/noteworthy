@@ -1,3 +1,25 @@
+*** highlight ***
+
+import Editor from "draft-js-plugins-editor";
+
+import createHighlightPlugin from './plugins/highlightPlugin';
+
+const highlightPlugin = createHighlightPlugin();
+
+this.plugins = [
+  highlightPlugin
+];
+
+highlight = () => {
+  this.onChange( 
+    RichUtils.toggleInlineStyle
+    (this.state.editorState, 'HIGHLIGHT')
+  );
+}
+
+<button onClick={this.highlight}><span style={{ background: "yellow" }}>H</span></button>
+
+
 *** link ***
 
 link = () => {
