@@ -1,4 +1,23 @@
 
-// variables goes here
+// interface
+$editor: var(--editor); 
+$sidebar: var(--sidebar);
+$text: var(--text);
+$light-text: var(--light-text);
+$primary: var(--primary);
+$separator: var(--separator);
 
-$red: red;
+//colors
+$white: #FEFEFE;
+$beige: #FDF6E3;
+$black: #343434;
+$grey: #9F9F9F;
+$orange: #EF9B6E;
+$light-grey: #DFDFDF;
+
+// spacing
+$xs: 0.8rem;
+$s: 1.2rem;
+$m: 1.6rem;
+$l: 3.2rem;
+$xl: 4.8rem;

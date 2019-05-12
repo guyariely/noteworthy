@@ -11,6 +11,9 @@
 # production
 /build
 
+# other
+/src/cemetery
+
 # misc
 .DS_Store
 .env.local

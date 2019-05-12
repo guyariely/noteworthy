@@ -1,7 +1,31 @@
 
-.toolbar {
+.ql-toolbar {
+  border-style: none;
+  border-bottom: 1px solid $separator;
+  padding: 0 0 $xs 0; 
+  font-size: 0.5rem;
+}
+
+.ql-formats {
   display: flex;
-  justify-content: center;
-  margin: 3em;
+  justify-content: space-around;
+}
+
+blockquote {
+  border-left: $orange solid $xs;
+  padding: $xs; 
+  background-color: $light-grey;
+  margin: 1rem 0;
+}
+
+code {
+  background-color: #fafafa;
+  font-family: 'menlo';
+  font-weight: 100;
+  font-size: 0.5rem;
+}
+
+code-block {
+  background-color: grey;
 }
 

@@ -1,3 +1,23 @@
+*** link ***
+
+link = () => {
+
+    const editorState = this.state.editorState;
+    const selection = editorState.getSelection();
+    const link = window.prompt('Paste the link -');
+
+    if (!link) {
+      this.onChange(RichUtils.toggleLink(editorState, selection, null));
+      return 'handled';
+    }
+
+    const content = editorState.getCurrentContent();
+    const contentWithEntity = content.createEntity('LINK', 'MUTABLE', { url: link });
+    const newEditorState = EditorState.push(editorState, contentWithEntity, 'create-entity');
+    const entityKey = contentWithEntity.getLastCreatedEntityKey();
+    this.onChange(RichUtils.toggleLink(newEditorState, selection, entityKey));
+  }
+
 
 *** adding a format option***
 
