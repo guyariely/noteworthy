@@ -11,28 +11,26 @@ const Toolbar = props => {
   const activeStyle = editorState.getCurrentInlineStyle();
 
   return (
-    <div>
-      <div className="toolbar">
+    <div id="toolbar">
 
-        <HeadersDropdown
-          activeBlock={activeBlock}
-          toggleBlockType={props.toggleBlockType}
-        />
+      <HeadersDropdown
+        activeBlock={activeBlock}
+        toggleBlockType={props.toggleBlockType}
+      />
 
-        <BlockStyles
-          activeBlock={activeBlock}
-          toggleBlockType={props.toggleBlockType}
-          checklist={props.checklist}
-          editorState={editorState}
-        />
+      <InlineStyles 
+        activeStyle={activeStyle}
+        toggleInlineStyle={props.toggleInlineStyle}
+        editorState={editorState}
+      />
 
-        <InlineStyles 
-          activeStyle={activeStyle}
-          toggleInlineStyle={props.toggleInlineStyle}
-          editorState={editorState}
-        />
+      <BlockStyles
+        activeBlock={activeBlock}
+        toggleBlockType={props.toggleBlockType}
+        checklist={props.checklist}
+        editorState={editorState}
+      />
 
-      </div>
     </div>
   );
 };

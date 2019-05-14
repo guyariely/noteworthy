@@ -1,14 +1,14 @@
 
 :root {
-  --editor: #FEFEFE;
-  --sidebar: #FDF6E3;
-  --text: #343434;
-  --light-text: #9F9F9F;
-  --primary: #EF9B6E;
-  --separator: #DFDFDF; 
+  --editor: rgb(255, 255, 255);
+  --sidebar: rgb(252, 251, 247);
+  --text: rgb(58, 56, 55);
+  --light-text: rgb(216, 213, 210);
+  --primary: rgb(239, 155, 110);
+  --separator: rgb(242, 237, 232); 
 }
 
 body {
-  background: white;
+  background: $editor;
 }
 

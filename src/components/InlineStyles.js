@@ -2,17 +2,17 @@ import React from 'react';
 import StyleButton from './StyleButton';
 
 const inlineTypes = [
-  { label: "U", style: "UNDERLINE"},
+  { label: "B", style: "BOLD" },  
   { label: "I", style: "ITALIC" },
-  { label: "B", style: "BOLD" },
-  { label: "</>", style: "CODE" },
-  { label: "H", style: "HIGHLIGHT"}
+  { label: "U", style: "UNDERLINE" },
+  { label: "H", style: "HIGHLIGHT" },
+  { label: "</>", style: "CODE" }
 ];
   
 const InlineStyles = props => {
 
   return (
-    <div>
+    <div id="toolbar__inline-styles">
     {
       inlineTypes.map(inlineType => {
         return (

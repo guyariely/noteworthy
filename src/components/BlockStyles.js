@@ -2,9 +2,9 @@ import React from 'react';
 import StyleButton from './StyleButton';
 
 const blockTypes = [
-  { label: " “ ” ", style: "blockquote" },
-  { label: "UL", style: "unordered-list-item" },
   { label: "OL", style: "ordered-list-item" },
+  { label: "UL", style: "unordered-list-item" }, 
+  { label: " “ ” ", style: "blockquote" },  
   { label: "{ }", style: 'code-block' }
 ];
 
@@ -14,6 +14,9 @@ const BlockStyles = props => {
 
   return (
     <div>
+      <button class="style-button">        
+       <Checklist editorState={props.editorState} />
+      </button>
       {
         blockTypes.map(blockType => {
           return (
@@ -27,9 +30,7 @@ const BlockStyles = props => {
           );
         })
       }
-      <button>        
-       <Checklist editorState={props.editorState} />
-      </button>
+      
     </div>
   );
 };

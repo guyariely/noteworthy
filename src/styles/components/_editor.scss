@@ -1,27 +1,13 @@
 
 #editor-container {
-  background: #fafafa;
-  padding: $s;
-  margin-top: $m;
+  background: $editor;
+  color: $text;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: $xs;
-  box-shadow: 3px 3px 5px 6px #ccc;
-}
-
-pre{
-  border: 1px solid #ccc;
-  background: #f0f0f0;
-  border-radius: .2em;
-  padding: .5em;
-  margin: 0;
+  font-size: $s;
+  padding: $m;
 }
 
 
-pre > pre {
-  background: none;
-  border: none;
-  padding: 0;
-}
 
 
 

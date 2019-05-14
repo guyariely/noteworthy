@@ -1,8 +1,8 @@
 import React from 'react';
 
 const headers = [
-  { label: "Title", style: "header-one" },
   { label: "Heading", style: "header-two" },
+  { label: "Title", style: "header-one" }
 ]; 
 
 const HeadersDropdown = props => {
@@ -16,6 +16,7 @@ const HeadersDropdown = props => {
     <select 
       value={props.activeBlock} 
       onChange={onToggle}
+      className="headersDropdown"
     >
       <option value="">Body</option>
       {

@@ -59,17 +59,16 @@ class TextEditor extends React.Component {
   render() {
 
     return (
-      <div>
+      <div id="editor-container">
 
         <Toolbar
-          editorState={this.state.editorState} 
-          toggleBlockType={this.toggleBlockType}
-          toggleInlineStyle={this.toggleInlineStyle}
-          checklist={checkableListPlugin}
-        />
-
-        <div id="editor-container">
-          <Editor 
+            editorState={this.state.editorState} 
+            toggleBlockType={this.toggleBlockType}
+            toggleInlineStyle={this.toggleInlineStyle}
+            checklist={checkableListPlugin}
+          />
+        
+        <Editor 
             editorState={this.state.editorState}
             handleKeyCommand={this.handleKeyCommand}
             onChange={this.onChange}
@@ -77,7 +76,6 @@ class TextEditor extends React.Component {
             ref={this.setDomEditorRef}
           />
           
-        </div>
       </div>
     );
   }
