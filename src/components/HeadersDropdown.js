@@ -10,7 +10,7 @@ const HeadersDropdown = props => {
   const onToggle = e => {
     let value = e.target.value;
     props.toggleBlockType(value);
-  }
+  };
   
   return (
     <select 
@@ -31,8 +31,8 @@ const HeadersDropdown = props => {
         })
       }
     </select>
-  )
-}
+  );
+};
 
 
 export default HeadersDropdown;

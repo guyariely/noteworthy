@@ -1,5 +1,5 @@
 import React from 'react';
-import BlockButton from './BlockButton';
+import StyleButton from './StyleButton';
 
 const blockTypes = [
   { label: " “ ” ", style: "blockquote" },
@@ -8,24 +8,30 @@ const blockTypes = [
   { label: "{ }", style: 'code-block' }
 ];
 
-const BlockButtons = props => {
+const BlockStyles = props => {
+
+  const Checklist = props.checklist.Button;
 
   return (
     <div>
       {
         blockTypes.map(blockType => {
           return (
-            <BlockButton 
+            <StyleButton 
               active={blockType.style === props.activeBlock}
-              blockType={blockType}
-              toggleBlockType={props.toggleBlockType}
+              style={blockType.style}
+              label={blockType.label}
+              toggleStyle={props.toggleBlockType}
               key={blockType.label}
             />
           );
         })
       }
+      <button>        
+       <Checklist editorState={props.editorState} />
+      </button>
     </div>
   );
 };
 
-export default BlockButtons;
+export default BlockStyles;

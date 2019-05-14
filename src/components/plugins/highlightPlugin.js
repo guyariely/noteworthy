@@ -4,11 +4,12 @@ export default () => {
 	return {
 		customStyleMap: {
 			HIGHLIGHT: {
-				background: "#fffe0d"
+				background: "orange",
+				color: "white"
 			}
 		},
 		keyBindingFn: e => {
-			if (e.metaKey && e.key === "h") {
+			if (e.ctrl && e.key === "h") {
 				return "highlight";
 			}
 		},
