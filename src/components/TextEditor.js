@@ -1,10 +1,11 @@
 import React from 'react';
-import { EditorState, RichUtils } from 'draft-js';
+import { EditorState, RichUtils, convertToRaw, convertFromRaw } from 'draft-js';
 import Editor from 'draft-js-plugins-editor';
 import Toolbar from './Toolbar';
-
 import createHighlightPlugin from './plugins/highlightPlugin';
 import createCheckableListPlugin from 'draft-js-checkable-list-plugin';
+import Prism from 'prismjs';
+import { styleMap } from './InlineStyles';
 
 const highlightPlugin = createHighlightPlugin();
 const checkableListPlugin = createCheckableListPlugin();
@@ -17,10 +18,22 @@ class TextEditor extends React.Component {
     this.toggleBlockType = this.toggleBlockType.bind(this);
     this.toggleInlineStyle = this.toggleInlineStyle.bind(this);
 
-    this.state = { editorState: EditorState.createEmpty() };
-    this.onChange = editorState => { this.setState({editorState}); };
-    this.setDomEditorRef = ref => this.domEditor = ref;
+    this.state = { };
+    const content = window.localStorage.getItem('content');
 
+    if (content) {
+      this.state.editorState = EditorState.createWithContent(
+        convertFromRaw(JSON.parse(content))
+      );
+    } else this.state.editorState = Editor.state.createEmpty();
+ 
+    this.onChange = editorState => { 
+      const contentState = editorState.getCurrentContent();
+      this.saveContent(contentState);
+      this.setState({editorState}); 
+    };
+
+    this.setDomEditorRef = ref => this.domEditor = ref;
     this.plugins = [highlightPlugin, checkableListPlugin];
   }
 
@@ -56,20 +69,25 @@ class TextEditor extends React.Component {
     );
   }
 
+  saveContent = (content) => {
+    window.localStorage.setItem('content', JSON.stringify(convertToRaw(content)));
+  }
+
   render() {
 
     return (
       <div id="editor-container">
 
         <Toolbar
-            editorState={this.state.editorState} 
-            toggleBlockType={this.toggleBlockType}
-            toggleInlineStyle={this.toggleInlineStyle}
-            checklist={checkableListPlugin}
-          />
-        
+          editorState={this.state.editorState} 
+          toggleBlockType={this.toggleBlockType}
+          toggleInlineStyle={this.toggleInlineStyle}
+          checklist={checkableListPlugin}
+        />
+          
         <Editor 
             editorState={this.state.editorState}
+            customStyleMap={styleMap}
             handleKeyCommand={this.handleKeyCommand}
             onChange={this.onChange}
             plugins={this.plugins}

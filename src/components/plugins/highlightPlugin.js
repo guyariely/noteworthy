@@ -4,8 +4,7 @@ export default () => {
 	return {
 		customStyleMap: {
 			HIGHLIGHT: {
-				background: "orange",
-				color: "white"
+				background: "rgb(255, 233, 221)"
 			}
 		},
 		keyBindingFn: e => {

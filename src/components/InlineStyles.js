@@ -2,12 +2,28 @@ import React from 'react';
 import StyleButton from './StyleButton';
 
 const inlineTypes = [
-  { label: "B", style: "BOLD" },  
-  { label: "I", style: "ITALIC" },
-  { label: "U", style: "UNDERLINE" },
-  { label: "H", style: "HIGHLIGHT" },
-  { label: "</>", style: "CODE" }
+  { label: "faBold", style: "BOLD" },  
+  { label: "faItalic", style: "ITALIC" },
+  { label: "faUnderline", style: "UNDERLINE" },
+  { label: "faHighlighter", style: "HIGHLIGHT" },
+  { label: "faCode", style: "CODE" }
 ];
+
+export const styleMap = {
+  'CODE': {
+    color: 'var(--code-color)',
+    fontFamily: 'monospace',
+    borderRadius: '2px',
+    background: 'var(--code-inline)',
+    padding: '0px 5px'
+  },
+  HIGHLIGHT: {
+    background: "var(--marker)"
+  },
+  'UNDERLINE': {
+    textDecoration: 'underline solid var(--primary)',
+  }
+};
   
 const InlineStyles = props => {
 

@@ -1,28 +1,21 @@
+  
+.checkable-list-item-block.is-checked {
+  opacity: 0.4;
+  text-decoration: line-through;
+}
 
 blockquote {
-  border-left: $orange solid $xs;
-  padding: $xs; 
-  background-color: $light-grey;
+  border-left: $primary solid 4px;
+  padding: 5px $xs; 
+  opacity: 0.8;
   margin: 1rem 0;
 }
 
-code {
-  background-color: #fafafa;
-  font-family: 'menlo';
-  font-weight: 100;
-  font-size: 0.5rem;
-}
-
 pre {
-  border: 1px solid #ccc;
   background: #f0f0f0;
-  border-radius: .2em;
-  padding: .5em;
+  border-radius: .2rem;
+  color: var(--code-color);
+  padding: .5rem;
   margin: 0;
 }
 
-pre > pre {
-  background: none;
-  border: none;
-  padding: 0;
-}

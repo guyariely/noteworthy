@@ -2,8 +2,60 @@
 #toolbar {
   border-bottom: 2px solid $separator;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   padding: 0 0 $xs 0;
   margin-bottom: $m;
+}
+
+.headersDropdown  {
+  background: var(--editor);
+  color: $icons;
+  font-weight: 500;
+  margin-right: $xs;
+  border-style: none;
+  
+  &:hover {
+  color: $primary;
+  }
+}
+
+.style-button {
+  color: $icons;
+  margin: 0 $xs;
+  background: none;
+  border-style: none;
+
+  &:hover {
+    color: $primary;
+    cursor: pointer;
+  }
+
+  &.active {
+    color: $primary;
+  }
+}
+
+.block-styles {
+  display: flex;
+}
+
+.checkable-list-item-button {
+  color: $icons;
+  margin-right: $xs;
+  opacity: 1 !important;
+
+  &.active > .checkable-list-item-button__inner {
+    color: $primary; 
+  }
+}
+
+.checkable-list-item-button__inner {
+  color: $icons;
+  width: 30px !important;
+  height: 20px !important;
+
+  &:hover {
+    color: $primary;
+  }
 }
 
