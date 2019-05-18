@@ -4,7 +4,6 @@ import Editor from 'draft-js-plugins-editor';
 import Toolbar from './Toolbar';
 import createHighlightPlugin from './plugins/highlightPlugin';
 import createCheckableListPlugin from 'draft-js-checkable-list-plugin';
-import Prism from 'prismjs';
 import { styleMap } from './InlineStyles';
 
 const highlightPlugin = createHighlightPlugin();
@@ -24,7 +23,7 @@ class TextEditor extends React.Component {
     if (content) {
       this.state.editorState = EditorState.createWithContent(
         convertFromRaw(JSON.parse(content))
-      );
+      );      
     } else this.state.editorState = Editor.state.createEmpty();
  
     this.onChange = editorState => { 

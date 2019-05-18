@@ -1,15 +1,15 @@
 
 :root {
-  --editor: rgb(34, 34, 34);
+  --editor: rgb(255, 255, 255);
   --sidebar: rgb(252, 251, 247);
-  --icons: rgb(218, 218, 218);
-  --text: rgb(225, 225, 225);
+  --icons: rgb(77, 74, 71);
+  --text: rgb(36, 35, 34);
   --light-text: rgb(216, 213, 210);
   --primary: rgb(239, 155, 110);
-  --separator: rgb(126, 126, 126); 
+  --separator: rgb(242, 237, 232); 
   --code-inline: #f7f7f7;
-  --marker: rgb(63, 63, 63);
-  --code-color: rgb(0, 0, 0);
+  --marker: rgb(255, 233, 221);
+  --code-color: (36, 35, 34);
 }
 
 /* light-theme 
@@ -23,6 +23,19 @@
   --code-inline: #f7f7f7;
   --marker: rgb(255, 233, 221);
   --code-color: (36, 35, 34);
+*/
+
+/* dark-theme 
+  --editor: rgb(34, 34, 34);
+  --sidebar: rgb(252, 251, 247);
+  --icons: rgb(218, 218, 218);
+  --text: rgb(225, 225, 225);
+  --light-text: rgb(216, 213, 210);
+  --primary: rgb(239, 155, 110);
+  --separator: rgb(126, 126, 126); 
+  --code-inline: #f7f7f7;
+  --marker: rgb(63, 63, 63);
+  --code-color: rgb(0, 0, 0);
 */
 
 body {
