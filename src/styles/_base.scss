@@ -1,44 +1,53 @@
-
+// colors
 :root {
-  --editor: rgb(255, 255, 255);
+  --background: url(../images/white-wall.png);
   --sidebar: rgb(252, 251, 247);
   --icons: rgb(77, 74, 71);
   --text: rgb(36, 35, 34);
   --light-text: rgb(216, 213, 210);
   --primary: rgb(239, 155, 110);
   --separator: rgb(242, 237, 232); 
-  --code-inline: #f7f7f7;
-  --marker: rgb(255, 233, 221);
+  --highlight: rgb(255, 233, 221);
   --code-color: (36, 35, 34);
+  --code-background: rgb(235, 235, 235);
+  --utils: #c0c0c0;
+}
+
+// spacing
+$xs: 0.8rem;
+$s: 1.2rem;
+$m: 1.6rem;
+$l: 3.2rem;
+$xl: 4.8rem;
+
+
+html {
+  background: var(--background);
 }
 
 /* light-theme 
-  --editor: rgb(255, 255, 255);
+  --background: url(../images/white-wall.png);
   --sidebar: rgb(252, 251, 247);
   --icons: rgb(77, 74, 71);
   --text: rgb(36, 35, 34);
   --light-text: rgb(216, 213, 210);
   --primary: rgb(239, 155, 110);
   --separator: rgb(242, 237, 232); 
-  --code-inline: #f7f7f7;
-  --marker: rgb(255, 233, 221);
+  --highlight: rgb(255, 233, 221);
   --code-color: (36, 35, 34);
+  --code-background: rgb(235, 235, 235);
 */
 
 /* dark-theme 
-  --editor: rgb(34, 34, 34);
+  --background: rgb(46, 50, 53);
   --sidebar: rgb(252, 251, 247);
   --icons: rgb(218, 218, 218);
   --text: rgb(225, 225, 225);
   --light-text: rgb(216, 213, 210);
   --primary: rgb(239, 155, 110);
   --separator: rgb(126, 126, 126); 
-  --code-inline: #f7f7f7;
-  --marker: rgb(63, 63, 63);
-  --code-color: rgb(0, 0, 0);
+  --highlight: rgb(179, 105, 66);
+  --code-color: rgb(235, 235, 235);
+  --code-background: rgb(75, 75, 75);
 */
-
-body {
-  background: $editor;
-}
 

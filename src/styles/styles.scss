@@ -1,6 +1,13 @@
 
-@import './base/setting';
-@import './base/base';
+@import './base';
+@import './components/app';
+
 @import './components/editor';
 @import './components/toolbar';
 @import './components/codeblocks';
+@import './components/utilities';
+
+@import './components/sidebar';
+
+
+

@@ -2,9 +2,11 @@ import React from 'react';
 import { EditorState, RichUtils, convertToRaw, convertFromRaw } from 'draft-js';
 import Editor from 'draft-js-plugins-editor';
 import Toolbar from './Toolbar';
-import createHighlightPlugin from './plugins/highlightPlugin';
-import createCheckableListPlugin from 'draft-js-checkable-list-plugin';
+import Utilities from './Utilities';
 import { styleMap } from './InlineStyles';
+
+import createHighlightPlugin from '../plugins/highlightPlugin';
+import createCheckableListPlugin from 'draft-js-checkable-list-plugin';
 
 const highlightPlugin = createHighlightPlugin();
 const checkableListPlugin = createCheckableListPlugin();
@@ -83,8 +85,8 @@ class TextEditor extends React.Component {
           toggleInlineStyle={this.toggleInlineStyle}
           checklist={checkableListPlugin}
         />
-          
-        <Editor 
+
+          <Editor 
             editorState={this.state.editorState}
             customStyleMap={styleMap}
             handleKeyCommand={this.handleKeyCommand}
@@ -92,7 +94,12 @@ class TextEditor extends React.Component {
             plugins={this.plugins}
             ref={this.setDomEditorRef}
           />
-          
+
+          <Utilities 
+            collapseSidebar={this.props.collapseSidebar}
+            isCollapsed={this.props.isCollapsed}
+          />
+        
       </div>
     );
   }

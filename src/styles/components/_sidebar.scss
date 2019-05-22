@@ -1,0 +1,22 @@
+
+.sidebar-container {
+  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--sidebar);
+
+  height: auto;
+  width: 220px;
+  border-right: 2px solid var(--separator);
+
+  transition: width 0.35s;
+  overflow: auto;
+
+  &.collapsed {
+    width: 0;
+  }
+}
+
+.sidebar {
+  padding: $s;
+}
+

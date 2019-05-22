@@ -1,37 +1,43 @@
 
 #toolbar {
-  border-bottom: 2px solid $separator;
+  background: var(--background);
+  border-bottom: 2px solid var(--separator);
+  padding: $m 0;
+  width: 100%;
+
   display: flex;
   justify-content: flex-start;
-  padding: 0 0 $xs 0;
-  margin-bottom: $m;
+  flex-wrap: wrap;
+
+  position: fixed;
+  z-index: 1;
 }
 
 .headersDropdown  {
-  background: var(--editor);
-  color: $icons;
+  background: transparent;
+  color: var(--icons);
   font-weight: 500;
   margin-right: $xs;
   border-style: none;
   
   &:hover {
-  color: $primary;
+  color: var(--primary);
   }
 }
 
 .style-button {
-  color: $icons;
+  color: var(--icons);
   margin: 0 $xs;
   background: none;
   border-style: none;
 
   &:hover {
-    color: $primary;
+    color: var(--primary);
     cursor: pointer;
   }
 
   &.active {
-    color: $primary;
+    color: var(--primary);
   }
 }
 
@@ -40,22 +46,22 @@
 }
 
 .checkable-list-item-button {
-  color: $icons;
+  color: var(--icons);
   margin-right: $xs;
   opacity: 1 !important;
 
   &.active > .checkable-list-item-button__inner {
-    color: $primary; 
+    color: var(--primary); 
   }
 }
 
 .checkable-list-item-button__inner {
-  color: $icons;
+  color: var(--icons);
   width: 30px !important;
   height: 20px !important;
 
   &:hover {
-    color: $primary;
+    color: var(--primary);
   }
 }
 

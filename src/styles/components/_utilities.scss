@@ -1,0 +1,28 @@
+.utilities {
+  position: fixed;
+  right: 2.2rem;
+  top: 6.8rem;
+
+  display: flex;
+  flex-direction: column;
+
+  opacity: 0.3;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.utility {
+  color: var(--utils);
+  margin: $xs 0;
+  font-size: 1.33em;
+
+  &:hover {
+    color: var(--primary);
+    opacity: 1;
+  }
+}
+
+.expand {
+  margin-top: 0;
+}

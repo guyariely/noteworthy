@@ -4,7 +4,7 @@ import BlockStyles from './BlockStyles';
 import InlineStyles from './InlineStyles';
 
 const Toolbar = props => {
-    
+
   const editorState = props.editorState; 
   const key = editorState.getSelection().getStartKey();
   const activeBlock = editorState.getCurrentContent().getBlockForKey(key).getType();
@@ -12,7 +12,7 @@ const Toolbar = props => {
 
   return (
     <div id="toolbar">
-
+    
       <HeadersDropdown
         activeBlock={activeBlock}
         toggleBlockType={props.toggleBlockType}

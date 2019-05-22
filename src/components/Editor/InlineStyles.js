@@ -14,11 +14,12 @@ export const styleMap = {
     color: 'var(--code-color)',
     fontFamily: 'monospace',
     borderRadius: '2px',
-    background: 'var(--code-inline)',
-    padding: '0px 5px'
+    background: 'var(--code-background)',
+    padding: '3px 5px'
   },
   HIGHLIGHT: {
-    background: "var(--marker)"
+    background: "var(--highlight)",
+    padding: '1px 5px'
   },
   'UNDERLINE': {
     textDecoration: 'underline solid var(--primary)',
