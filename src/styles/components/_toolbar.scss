@@ -3,14 +3,13 @@
   background: var(--background);
   border-bottom: 2px solid var(--separator);
   padding: $m 0;
-  width: 100%;
 
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
 
-  position: fixed;
-  z-index: 1;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
 }
 
 .headersDropdown  {

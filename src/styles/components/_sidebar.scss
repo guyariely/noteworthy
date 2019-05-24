@@ -4,7 +4,6 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: var(--sidebar);
 
-  height: auto;
   width: 220px;
   border-right: 2px solid var(--separator);
 
@@ -20,3 +19,9 @@
   padding: $s;
 }
 
+.note {
+  &:hover {
+    color: var(--primary);
+    cursor: pointer;
+  }
+}

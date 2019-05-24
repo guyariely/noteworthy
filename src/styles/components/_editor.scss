@@ -1,23 +1,14 @@
 
-#editor-container {
-  color: var(--text);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: $s;
-  padding: 0 $m 0 $m;
-  height: auto;
+.editor {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+
   overflow: auto;
-
-  display: grid;
-  grid-template-columns: 90% 10%;
-}
-
-.DraftEditor-root {
-  z-index: 0;
-  padding-top: 5.8em;
+  
   line-height: 1.58;
 
-  height: 100vh;
   caret-color: var(--primary);
+  padding: 0 $s 0 0;
 }
 
 ::selection {

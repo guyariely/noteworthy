@@ -19,18 +19,22 @@ class TextEditor extends React.Component {
     this.toggleBlockType = this.toggleBlockType.bind(this);
     this.toggleInlineStyle = this.toggleInlineStyle.bind(this);
 
-    this.state = { };
-    const content = window.localStorage.getItem('content');
+    this.state = { 
+      activeNote: ''
+    };
+    const activeNoteName = Object.keys(localStorage)[0]; 
+    const defaultNote = window.localStorage.getItem(Object.keys(localStorage)[0]);
 
-    if (content) {
+    if (defaultNote) {
       this.state.editorState = EditorState.createWithContent(
-        convertFromRaw(JSON.parse(content))
-      );      
+        convertFromRaw(JSON.parse(defaultNote))
+      );
+      this.setState({activeNote: activeNoteName});
     } else this.state.editorState = Editor.state.createEmpty();
  
     this.onChange = editorState => { 
       const contentState = editorState.getCurrentContent();
-      this.saveContent(contentState);
+      this.saveNote(contentState);
       this.setState({editorState}); 
     };
 
@@ -70,8 +74,8 @@ class TextEditor extends React.Component {
     );
   }
 
-  saveContent = (content) => {
-    window.localStorage.setItem('content', JSON.stringify(convertToRaw(content)));
+  saveNote = note => {
+    window.localStorage.setItem(this.state.activeNote, JSON.stringify(convertToRaw(note)));
   }
 
   render() {
@@ -86,14 +90,17 @@ class TextEditor extends React.Component {
           checklist={checkableListPlugin}
         />
 
+        <main className="editor">
           <Editor 
-            editorState={this.state.editorState}
-            customStyleMap={styleMap}
-            handleKeyCommand={this.handleKeyCommand}
-            onChange={this.onChange}
-            plugins={this.plugins}
-            ref={this.setDomEditorRef}
-          />
+              editorState={this.state.editorState}
+              customStyleMap={styleMap}
+              handleKeyCommand={this.handleKeyCommand}
+              onChange={this.onChange}
+              plugins={this.plugins}
+              ref={this.setDomEditorRef}
+            />
+        </main>
+          
 
           <Utilities 
             collapseSidebar={this.props.collapseSidebar}

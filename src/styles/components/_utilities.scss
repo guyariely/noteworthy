@@ -1,10 +1,12 @@
-.utilities {
-  position: fixed;
-  right: 2.2rem;
-  top: 6.8rem;
+
+.utils {
+  padding-top: $m; 
 
   display: flex;
   flex-direction: column;
+
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
 
   opacity: 0.3;
   &:hover {
@@ -12,7 +14,7 @@
   }
 }
 
-.utility {
+.util {
   color: var(--utils);
   margin: $xs 0;
   font-size: 1.33em;
@@ -20,8 +22,11 @@
   &:hover {
     color: var(--primary);
     opacity: 1;
+    cursor: pointer;
   }
 }
+
+// TODO: use grid-gap instead of flexbox
 
 .expand {
   margin-top: 0;

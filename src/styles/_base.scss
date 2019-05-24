@@ -25,6 +25,8 @@ html {
   background: var(--background);
 }
 
+::-webkit-scrollbar { display: none !important }
+
 /* light-theme 
   --background: url(../images/white-wall.png);
   --sidebar: rgb(252, 251, 247);
