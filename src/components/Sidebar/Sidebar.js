@@ -9,6 +9,10 @@ class Sidebar extends React.Component {
   }
 
   render() {
+
+    const openNote = e => {
+      this.props.openNote(e.target.innerHTML);
+    };
     
     const className = this.props.isCollapsed ? "sidebar-container collapsed" : "sidebar-container";
 
@@ -17,11 +21,13 @@ class Sidebar extends React.Component {
           <div className="sidebar">
           <h1>Sidebar</h1>
           {
-            this.state.notesList.map(noteTitle => {
+            this.state.notesList.map((noteTitle, index) => {
+              if (index == 0) return;
               return (
                 <p 
                   className="note" 
                   key={noteTitle}
+                  onMouseDown={openNote}
                 >
                   {noteTitle}
                 </p>

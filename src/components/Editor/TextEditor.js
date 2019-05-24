@@ -20,26 +20,42 @@ class TextEditor extends React.Component {
     this.toggleInlineStyle = this.toggleInlineStyle.bind(this);
 
     this.state = { 
-      activeNote: ''
+      activeNote: window.localStorage.key(0) 
     };
-    const activeNoteName = Object.keys(localStorage)[0]; 
-    const defaultNote = window.localStorage.getItem(Object.keys(localStorage)[0]);
 
-    if (defaultNote) {
+    const welcomeNote = window.localStorage.getItem(window.localStorage.key(0)); 
+
+    if (welcomeNote) {
       this.state.editorState = EditorState.createWithContent(
-        convertFromRaw(JSON.parse(defaultNote))
+        convertFromRaw(JSON.parse(welcomeNote))
       );
-      this.setState({activeNote: activeNoteName});
     } else this.state.editorState = Editor.state.createEmpty();
  
     this.onChange = editorState => { 
       const contentState = editorState.getCurrentContent();
       this.saveNote(contentState);
-      this.setState({editorState}); 
+      this.setState({editorState});       
     };
 
     this.setDomEditorRef = ref => this.domEditor = ref;
     this.plugins = [highlightPlugin, checkableListPlugin];
+  }
+
+  saveNote(note) {
+    window.localStorage.setItem(
+      this.state.activeNote, 
+      JSON.stringify(convertToRaw(note))
+    );    
+  }
+
+  openNote(noteTitle) {
+    this.setState({
+      activeNote: noteTitle,
+      editorState: EditorState.createWithContent(
+        convertFromRaw(JSON.parse(window.localStorage.getItem(noteTitle)))
+      )
+    });
+    
   }
 
   componentDidMount() {
@@ -72,10 +88,6 @@ class TextEditor extends React.Component {
         this.state.editorState, style
       )
     );
-  }
-
-  saveNote = note => {
-    window.localStorage.setItem(this.state.activeNote, JSON.stringify(convertToRaw(note)));
   }
 
   render() {

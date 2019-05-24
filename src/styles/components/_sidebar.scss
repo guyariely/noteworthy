@@ -8,6 +8,8 @@
   border-right: 2px solid var(--separator);
 
   transition: width 0.35s;
+
+  height: 100vh;
   overflow: auto;
 
   &.collapsed {

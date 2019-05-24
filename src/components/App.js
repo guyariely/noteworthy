@@ -7,6 +7,7 @@ class App extends React.Component {
   constructor(props) {
      super(props);
      this.collapseSidebar = this.collapseSidebar.bind(this);
+     this.openNote = this.openNote.bind(this);
 
      this.state = {
       sidebarIsCollapsed: false
@@ -21,6 +22,10 @@ class App extends React.Component {
     });
   }
 
+  openNote(noteTitle) {
+    this.refs.textEditor.openNote(noteTitle);
+  }
+
   render() {
     
     return (
@@ -28,11 +33,13 @@ class App extends React.Component {
 
         <Sidebar 
           isCollapsed={this.state.sidebarIsCollapsed}
+          openNote={this.openNote}
         />
 
         <TextEditor 
           isCollapsed={this.state.sidebarIsCollapsed}
           collapseSidebar={this.collapseSidebar}
+          ref="textEditor"
         />
         
       </div>
