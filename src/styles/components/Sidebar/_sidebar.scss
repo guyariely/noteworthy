@@ -1,11 +1,13 @@
 
-.sidebar-container {
+.sidebar {
   color: var(--text);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: var(--sidebar);
 
-  width: 220px;
+  width: 420px;
   border-right: 2px solid var(--separator);
+
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
 
   transition: width 0.35s;
 
@@ -17,13 +19,13 @@
   }
 }
 
-.sidebar {
+.left-sidebar {
+  background: var(--notebooks);
+  color: var(--notebooks-text);
   padding: $s;
+  font-size: $xs;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr 6fr 1fr 2fr; 
 }
 
-.note {
-  &:hover {
-    color: var(--primary);
-    cursor: pointer;
-  }
-}

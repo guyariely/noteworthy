@@ -5,8 +5,14 @@ import { faPlusSquare } from '@fortawesome/free-regular-svg-icons';
 
 const Utilities = props => {
 
+  const newNote = () => {
+    const noteTitle = prompt('enter a note title');
+    props.newNote(noteTitle);
+  };
+
   return (
     <div className="utils">
+
       <span 
         className="util expand" 
         onMouseDown={props.collapseSidebar}
@@ -19,12 +25,21 @@ const Utilities = props => {
       <span className="util">
         <FontAwesomeIcon icon={faPalette} />
       </span>
-      <span className="util">
+
+      <span 
+        className="util"
+        onMouseDown={props.deleteNote}
+      >
         <FontAwesomeIcon icon={faTrashAlt} />
       </span>
-      <span className="util">
-        <FontAwesomeIcon icon={faPlusSquare} />
+
+      <span 
+        className="util"
+        onMouseDown={newNote}
+        >
+        <FontAwesomeIcon icon={faPlusSquare}/>
       </span>
+
     </div>
   );
 };

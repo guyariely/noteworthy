@@ -1,44 +1,26 @@
 import React from 'react';
+import Notebooks from './Notebooks';
+import Notes from './Notes';
+import Account from './Account';
 
-class Sidebar extends React.Component {
-  constructor(props) {
-     super(props);
-     this.state = {
-       notesList: Object.keys(window.localStorage)
-     };
-  }
-
-  render() {
-
+const Sidebar = props => {
+  
     const openNote = e => {
-      this.props.openNote(e.target.innerHTML);
+      props.openNote(e.target.innerHTML);
     };
     
-    const className = this.props.isCollapsed ? "sidebar-container collapsed" : "sidebar-container";
+    const className = props.isCollapsed ? "sidebar collapsed" : "sidebar";
 
     return (
       <aside className={className}>
-          <div className="sidebar">
-          <h1>Sidebar</h1>
-          {
-            this.state.notesList.map((noteTitle, index) => {
-              if (index == 0) return;
-              return (
-                <p 
-                  className="note" 
-                  key={noteTitle}
-                  onMouseDown={openNote}
-                >
-                  {noteTitle}
-                </p>
-              );
-            })
-          }
+        <div className="left-sidebar">
+          <Account />
+          <Notebooks />
         </div>
+        <Notes openNote={openNote} />
       </aside>
     );
-  }
-}
+};
   
 
 export default Sidebar;

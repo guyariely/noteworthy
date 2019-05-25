@@ -1,14 +1,14 @@
 
 .editor {
   grid-column: 1 / 2;
-  grid-row: 2 / 3;
+  grid-row: 3 / 4;
 
   overflow: auto;
   
   line-height: 1.58;
 
   caret-color: var(--primary);
-  padding: 0 $s 0 0;
+  padding: 0 $s 2rem 0;
 }
 
 ::selection {

@@ -29,7 +29,7 @@ export const styleMap = {
 const InlineStyles = props => {
 
   return (
-    <div id="toolbar__inline-styles">
+    <div className="inline-styles">
     {
       inlineTypes.map(inlineType => {
         return (

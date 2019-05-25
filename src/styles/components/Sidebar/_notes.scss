@@ -1,0 +1,11 @@
+
+.notes {
+  padding: $s;
+}
+
+.note {
+  &:hover {
+    color: var(--primary);
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,16 @@
+
+.account {
+  grid-row: 1 / 2;
+
+  h3 {
+    margin: 0;
+  }
+
+  p {
+    filter: brightness(70%);
+  }
+}
+
+.account-icon {
+  padding-right: $xs;
+}

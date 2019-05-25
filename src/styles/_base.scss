@@ -1,16 +1,23 @@
 // colors
 :root {
   --background: url(../images/white-wall.png);
+
   --sidebar: rgb(252, 251, 247);
+  --notebooks: rgb(46, 50, 53);
+  --notebooks-text: rgb(225, 225, 225);
+
   --icons: rgb(77, 74, 71);
+  --separator: rgb(242, 237, 232); 
+  --utils: #c0c0c0;
+
   --text: rgb(36, 35, 34);
   --light-text: rgb(216, 213, 210);
   --primary: rgb(239, 155, 110);
-  --separator: rgb(242, 237, 232); 
   --highlight: rgb(255, 233, 221);
   --code-color: (36, 35, 34);
   --code-background: rgb(235, 235, 235);
-  --utils: #c0c0c0;
+
+
 }
 
 // spacing
@@ -23,9 +30,96 @@ $xl: 4.8rem;
 
 html {
   background: var(--background);
+  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: $s;
 }
 
-::-webkit-scrollbar { display: none !important }
+// hiding scrollbars
+::-webkit-scrollbar { 
+  display: none !important; 
+}
+
+// hiding all the blue focus borders
+* :focus {
+  outline: 0;
+}
+
+h1, h2 {
+  margin: 0 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* light-theme 
   --background: url(../images/white-wall.png);
