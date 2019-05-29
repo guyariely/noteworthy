@@ -1,18 +1,13 @@
 
 .sidebar {
-  color: var(--text);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-  width: 420px;
-  border-right: 2px solid var(--separator);
+  width: 500px;
 
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 2fr;
 
   transition: width 0.35s;
 
   height: 100vh;
-  overflow: auto;
 
   &.collapsed {
     width: 0;
@@ -20,12 +15,25 @@
 }
 
 .left-sidebar {
-  background: var(--notebooks);
-  color: var(--notebooks-text);
-  padding: $s;
   font-size: $xs;
+  padding: $s 0;
 
   display: grid;
-  grid-template-rows: 1fr 1fr 6fr 1fr 2fr; 
+  grid-template-rows: 25px auto; 
+  row-gap: $s;
+
+  overflow: auto;
 }
+
+.right-sidebar {
+  border-right: 2px solid var(--separator);
+  border-left: 2px solid var(--separator);
+
+  overflow: auto;
+}
+
+.sidebar .icon {
+  color: #565656;
+}
+
 

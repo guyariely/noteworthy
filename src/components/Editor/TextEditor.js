@@ -2,7 +2,7 @@ import React from 'react';
 import { EditorState, RichUtils, convertToRaw, convertFromRaw } from 'draft-js';
 import Editor from 'draft-js-plugins-editor';
 import Toolbar from './Toolbar';
-import Utilities from './Utilities';
+import QuickAccess from './QuickAccess';
 import { styleMap } from './InlineStyles';
 
 import createHighlightPlugin from '../plugins/highlightPlugin';
@@ -148,7 +148,7 @@ class TextEditor extends React.Component {
         </main>
           
 
-          <Utilities 
+          <QuickAccess 
             collapseSidebar={this.props.collapseSidebar}
             isCollapsed={this.props.isCollapsed}
             newNote={this.newNote}

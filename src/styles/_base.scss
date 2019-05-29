@@ -3,9 +3,8 @@
   --background: url(../images/white-wall.png);
 
   --sidebar: rgb(252, 251, 247);
-  --notebooks: rgb(46, 50, 53);
-  --notebooks-text: rgb(225, 225, 225);
-
+  --notebooks-selection: rgba(214, 214, 214, 0.329);
+  
   --icons: rgb(77, 74, 71);
   --separator: rgb(242, 237, 232); 
   --utils: #c0c0c0;
@@ -16,8 +15,6 @@
   --highlight: rgb(255, 233, 221);
   --code-color: (36, 35, 34);
   --code-background: rgb(235, 235, 235);
-
-
 }
 
 // spacing
@@ -58,77 +55,18 @@ h1, h2 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* light-theme 
   --background: url(../images/white-wall.png);
+
   --sidebar: rgb(252, 251, 247);
+  
   --icons: rgb(77, 74, 71);
+  --separator: rgb(242, 237, 232); 
+  --utils: #c0c0c0;
+
   --text: rgb(36, 35, 34);
   --light-text: rgb(216, 213, 210);
   --primary: rgb(239, 155, 110);
-  --separator: rgb(242, 237, 232); 
   --highlight: rgb(255, 233, 221);
   --code-color: (36, 35, 34);
   --code-background: rgb(235, 235, 235);

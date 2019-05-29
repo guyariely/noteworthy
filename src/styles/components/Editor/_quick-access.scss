@@ -1,6 +1,6 @@
 
-.utils {
-  padding-top: $m; 
+.quick-access {
+  padding: $xs 0;
 
   display: flex;
   flex-direction: column;
@@ -9,15 +9,16 @@
   grid-row: 2 / 4;
 
   opacity: 0.3;
+
   &:hover {
     opacity: 0.8;
   }
 }
 
-.util {
+.quick-access .util {
   color: var(--utils);
-  margin: $xs 0;
-  font-size: 1.33em;
+  margin: 0.6rem 0;
+  font-size: 1.33rem;
 
   &:hover {
     color: var(--primary);
@@ -26,8 +27,6 @@
   }
 }
 
-// TODO: use grid-gap instead of flexbox
-
-.expand {
-  margin-top: 0;
+.quick-access .themes {
+  margin-top: auto;
 }

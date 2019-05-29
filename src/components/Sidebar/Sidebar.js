@@ -2,6 +2,7 @@ import React from 'react';
 import Notebooks from './Notebooks';
 import Notes from './Notes';
 import Account from './Account';
+import Search from './Search';
 
 const Sidebar = props => {
   
@@ -17,7 +18,12 @@ const Sidebar = props => {
           <Account />
           <Notebooks />
         </div>
-        <Notes openNote={openNote} />
+
+        <div className="right-sidebar">
+          <Search />
+          {/*<NewNote newNote={props.newNote} />*/}
+          <Notes openNote={openNote} />
+        </div>
       </aside>
     );
 };

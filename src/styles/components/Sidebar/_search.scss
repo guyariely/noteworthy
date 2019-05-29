@@ -1,0 +1,19 @@
+
+.search-bar {
+  padding: $s 0 $s $s;
+  background: white;
+
+  display: flex;
+
+  input {
+    border-style: none;
+    background: none;
+
+    color: var(--notebooks-text);
+    overflow: auto;
+  }
+}
+
+.search-bar .icon {
+  margin: $xs $xs 0 0;
+}
