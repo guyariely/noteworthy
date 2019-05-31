@@ -9,7 +9,7 @@ const NewNote = props => {
     const noteTitle = prompt('enter a note title');
     props.newNote(noteTitle);
   };
-
+ 
   return (
     <span 
       className="util new-note"

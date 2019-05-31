@@ -1,28 +1,52 @@
 
 .notebooks-title {
-  margin-bottom: $xs;
+  margin-bottom: $s;
   padding: 0 $s;
-}
+  display: flex;
+  font-size: 20px;
 
-.notebook {
-  cursor: pointer;
-  padding: 8px $s;
+  .icon {
+    margin: 5px 0 0 $xs;
+    font-size: 14px;
 
-  p {
-    margin: 0;
+    transition: color 1s;
+
+    :hover {
+      cursor: pointer;
+      color: var(--primary);
+    }
   }
 
-  &:hover {
-    background: var(--notebooks-selection);
+  .add-notebook {
+    margin-left: auto;
   }
 }
 
 .bookmarks {
   color: var(--primary);
-  margin-bottom: $xs;
+  margin-bottom: 10px;
 
   .icon {
     color: var(--primary);
+  }
+}
+
+.notebook {
+  cursor: pointer;
+  padding: 8px $s;
+  width: 205.88px;
+  box-sizing: border-box;
+
+  p {
+    margin: 0;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &:hover {
+    background: var(--notebooks-selection);
   }
 }
 

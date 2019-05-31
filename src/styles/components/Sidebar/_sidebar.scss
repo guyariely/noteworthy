@@ -1,9 +1,9 @@
 
 .sidebar {
-  width: 500px;
+  width: 500px;;
 
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1.4fr 2fr;
 
   transition: width 0.35s;
 
@@ -14,22 +14,38 @@
   }
 }
 
-.left-sidebar {
+.sidebar-notebooks {
   font-size: $xs;
-  padding: $s 0;
 
   display: grid;
-  grid-template-rows: 25px auto; 
-  row-gap: $s;
+  grid-template-rows: auto auto; 
 
   overflow: auto;
 }
 
-.right-sidebar {
+.sidebar-notes {
   border-right: 2px solid var(--separator);
   border-left: 2px solid var(--separator);
 
   overflow: auto;
+}
+
+.sidebar-notes-header {
+  padding: $xs $xs;
+
+  display: flex;
+}
+
+.sidebar-notes-header .util {
+  margin-left: auto;
+  color: var(--icons);
+  font-size: 20px;
+  margin-top: 6px;
+  
+  :hover {
+    color: var(--primary);
+    cursor: pointer;
+  }
 }
 
 .sidebar .icon {

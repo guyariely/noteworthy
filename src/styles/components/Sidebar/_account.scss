@@ -1,17 +1,26 @@
 
 .account {
-  padding: 0 $s;
-  
-  h3 {
-    margin: 0;
-    opacity: 0.7;
+  padding: $xs $s;
+
+  .app-title {
+    font-weight: 700;
+    font-size: $s;
+    opacity: 0.2;
   }
-}
 
-.account .icon {
-  padding-right: $xs;
+  .account-utils {
+    opacity: 0.8;
+    display: flex;
+    margin-top: $m;
 
-  :hover {
-    color: var(--primary);
+    .icon {
+      font-size: 16px;
+      margin-right: $s;
+  
+      &:hover {
+        color: var(--primary);
+        cursor: pointer;
+      }
+    }
   }
 }

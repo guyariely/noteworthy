@@ -3,6 +3,7 @@ import Notebooks from './Notebooks';
 import Notes from './Notes';
 import Account from './Account';
 import Search from './Search';
+import NewNote from '../Editor/Utils/NewNote';
 
 const Sidebar = props => {
   
@@ -14,14 +15,16 @@ const Sidebar = props => {
 
     return (
       <aside className={className}>
-        <div className="left-sidebar">
+        <div className="sidebar-notebooks">
           <Account />
           <Notebooks />
         </div>
 
-        <div className="right-sidebar">
-          <Search />
-          {/*<NewNote newNote={props.newNote} />*/}
+        <div className="sidebar-notes">
+          <div className="sidebar-notes-header"> 
+            <Search />
+            <NewNote newNote={props.newNote} />
+          </div>
           <Notes openNote={openNote} />
         </div>
       </aside>

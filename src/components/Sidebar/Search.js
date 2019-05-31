@@ -6,7 +6,7 @@ const Search = () => {
   return (
     <div className="search-bar">
       <FontAwesomeIcon icon={faSearch} className="icon" />
-      <input type="text" placeholder="Search" spellCheck="false" />
+      <input type="text" placeholder="Search Notes" spellCheck="false" />
     </div>
   );
 };

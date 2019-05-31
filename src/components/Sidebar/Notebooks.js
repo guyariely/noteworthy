@@ -1,14 +1,18 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook, faRecycle, faBookmark, faArchive } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faPen, faBook, faRecycle, faBookmark, faArchive } from '@fortawesome/free-solid-svg-icons';
 
-const notebooks = ['Drafts', 'App Ideas', 'Homeworks', 'Math', 'Groceries'];
+const notebooks = ['Drafts', 'App Ideas', 'Homeworks', 'Math', 'Groceries', 'Drafts', 'App Ideas', 'Homeworks', 'Math', 'Groceries', 'Drafts', 'App Ideas', 'Homeworks', 'Math', 'Groceries', 'Drafts', 'App Ideas', 'Homeworks', 'Math', 'Groceries'];
 
 const Notebooks = () => {
   return (
     <div className="notebooks">
 
-      <p className="notebooks-title">LIBRARY</p>
+      <p className="notebooks-title">
+        Library
+        <FontAwesomeIcon icon={faPlus} className="icon add-notebook"/>
+        <FontAwesomeIcon icon={faPen} className="icon edit-notebooks"/>
+      </p>
 
       <div className="notebook bookmarks">
         <p>

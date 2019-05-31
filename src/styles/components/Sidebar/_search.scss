@@ -1,19 +1,27 @@
 
 .search-bar {
-  padding: $s 0 $s $s;
-  background: white;
+  border: 2px solid var(--separator);
+  border-radius: 10px;
+  font-size: 14px;
+
+  margin-right: $xs;
 
   display: flex;
+  flex: 1;
 
   input {
     border-style: none;
     background: none;
 
-    color: var(--notebooks-text);
+    line-height: 1;
+    width: 80%;
     overflow: auto;
   }
 }
 
 .search-bar .icon {
-  margin: $xs $xs 0 0;
+  margin: 10px;
+
+  opacity: 0.6;
+  filter: brightness(150%);
 }

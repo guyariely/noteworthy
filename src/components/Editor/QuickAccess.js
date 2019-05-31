@@ -1,7 +1,7 @@
 import React from 'react';
 import NewNote from './Utils/NewNote';
 import DeleteNote from './Utils/DeleteNote';
-import Themes from './Utils/Themes';
+import SwitchThemes from './Utils/SwitchThemes';
 import FullScreen from './Utils/FullScreen';
 
 const QuickAccess = props => {
@@ -10,7 +10,7 @@ const QuickAccess = props => {
     <div className="quick-access">
       <NewNote newNote={props.newNote} />     
       <DeleteNote deleteNote={props.deleteNote} />
-      <Themes />
+      <SwitchThemes toggleThemesModal={props.toggleThemesModal}/>
       <FullScreen isCollapsed={props.isCollapsed} collapseSidebar={props.collapseSidebar} />
     </div>
   );

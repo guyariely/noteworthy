@@ -15,13 +15,17 @@ class Notes extends React.Component {
     {
       this.state.notesList.map((noteTitle) => {
         return (
-          <p 
-            className="note" 
-            key={noteTitle}
-            onMouseDown={this.props.openNote}
-          >
-            {noteTitle}
-          </p>
+          <div className="note-container" key={noteTitle}>
+            <div 
+              className="note" 
+              onMouseDown={this.props.openNote}
+            >
+              <p className="note-title">
+                {noteTitle}
+              </p>
+            </div>
+          </div>
+        
         );
       })
     }

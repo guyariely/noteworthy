@@ -147,10 +147,10 @@ class TextEditor extends React.Component {
             />
         </main>
           
-
           <QuickAccess 
             collapseSidebar={this.props.collapseSidebar}
             isCollapsed={this.props.isCollapsed}
+            toggleThemesModal={this.props.toggleThemesModal}
             newNote={this.newNote}
             deleteNote={this.deleteNote}
           />

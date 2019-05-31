@@ -2,13 +2,13 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPalette } from '@fortawesome/free-solid-svg-icons';
 
-const Themes = () => {
+const SwitchThemes = props => {
 
   return (
-    <span className="util themes">
+    <span className="util themes" onMouseDown={props.toggleThemesModal}>
       <FontAwesomeIcon icon={faPalette} />
     </span>
   );
 };
 
-export default Themes;
+export default SwitchThemes;

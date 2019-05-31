@@ -1,13 +1,22 @@
 
 .notes {
-  padding: $s 0;
+  border-bottom: 2px solid var(--separator);
+}
+
+.note-container {
+  border-top: 2px solid var(--separator);
 }
 
 .note {
-  padding: 0 $s;
+  padding: $m $s;
+  transition: border 0.1s;
 
   &:hover {
-    color: var(--primary);
     cursor: pointer;
+    border-left: 4px solid var(--primary);
   }
+}
+
+.note-title {
+  margin: 0;
 }
