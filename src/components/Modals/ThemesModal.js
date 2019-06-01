@@ -1,14 +1,54 @@
 import React from 'react';
 import Modal from 'react-modal';
+import ThemePreview from './ThemesModalPreview';
 
 const ThemesModal = props => {
 
   const themes = ['Noteworthy', 'Dark'];
 
-  const switchTheme = e => {
-    e.preventDefault();
-    console.log(e);
-    
+  const switchTheme = theme => {
+
+    const style = document.documentElement.style;
+
+    switch (theme) {
+
+      case 'Noteworthy':
+        style.setProperty('--background', 'var(--white-wall)');
+        style.setProperty('--sidebar', 'rgb(252, 251, 247)');
+        style.setProperty('--notebooks-selection', 'rgba(214, 214, 214, 0.329)');
+        style.setProperty('--icons', '#565656');
+        style.setProperty('--toolbar-icons', 'rgb(77, 74, 71)');
+        style.setProperty('--separator', 'rgb(242, 237, 232)');
+        style.setProperty('--utils', '#c0c0c0');
+        style.setProperty('--heading', 'rgb(36, 35, 34');
+        style.setProperty('--text', 'rgb(36, 35, 34)');
+        style.setProperty('--light-text', 'rgb(216, 213, 210)');
+        style.setProperty('--primary', 'rgb(239, 155, 110)');
+        style.setProperty('--highlight', 'rgb(255, 233, 221)');
+        style.setProperty('--code-color', 'rgb(36, 35, 34)');
+        style.setProperty('--code-background', 'rgb(235, 235, 235)');
+        break;
+
+      case 'Dark':
+          style.setProperty('--background', 'rgb(46, 50, 53)');
+          style.setProperty('--sidebar', 'rgb(252, 251, 247)');
+          style.setProperty('--notebooks-selection', 'rgba(214, 214, 214, 0.329)');
+          style.setProperty('--icons', 'rgb(218, 218, 218)');
+          style.setProperty('--toolbar-icons', 'rgb(225, 225, 225)');
+          style.setProperty('--separator', 'rgb(126, 126, 126)');
+          style.setProperty('--utils', '#c0c0c0');
+          style.setProperty('--heading', 'rgb(225, 225, 225)');
+          style.setProperty('--text', 'rgb(225, 225, 225)');
+          style.setProperty('--light-text', 'rgb(216, 213, 210)');
+          style.setProperty('--primary', 'rgb(239, 155, 110)');
+          style.setProperty('--highlight', 'rgb(179, 105, 66)');
+          style.setProperty('--code-color', 'rgb(235, 235, 235)');
+          style.setProperty('--code-background', 'rgb(75, 75, 75)');
+          break;
+
+      default:
+        break;
+    }
   };
 
   return (
@@ -24,45 +64,10 @@ const ThemesModal = props => {
       {
         themes.map(theme => {
           return (
-            <div
-              className={`theme ${theme.toLowerCase()}`}
-              onMouseDown={switchTheme}
-            >
-              <h3 className="preview-heading">{theme}</h3>
-              <p>
-                This is a preview of the '{theme}' theme. 
-                Here are some inline styles to showcase it's style.
-                <span> </span>
-                <span className="preview-underline">Underline</span>,
-                <span> </span>
-                <strong>Bold</strong>,
-                <span> </span>
-                <em>Italic</em>,
-                <span> </span>
-                <span className="preview-highlight">Highlight</span>
-                <span> </span>
-                and 
-                <span> </span>
-                <span className="preview-code">Code</span>.
-              </p>
-
-              {
-                /*
-                      Lorem ipsum 
-                <strong> dolor sit amet </strong>
-                , consectetur adipiscing elit, sed do 
-                <span> </span>
-                <span className="preview-underline">eiusmod tempor</span> 
-                <span> </span>
-                incididunt ut 
-                <span className="preview-highlight"> labore et dolore </span> 
-                magna aliqua. 
-                <span className="preview-code"> Ut enim </span>
-                ad minim veniam.
-           
-                */
-              }
-            </div>
+            <ThemePreview 
+              theme={theme}
+              switchTheme={switchTheme}
+            />
           );
         })
       }
