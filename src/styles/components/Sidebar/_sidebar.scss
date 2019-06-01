@@ -27,11 +27,16 @@
   border-right: 2px solid var(--separator);
   border-left: 2px solid var(--separator);
 
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+
   overflow: auto;
 }
 
 .sidebar-notes-header {
   padding: $xs $xs;
+  border-bottom: 2px solid var(--separator);
 
   display: flex;
 }

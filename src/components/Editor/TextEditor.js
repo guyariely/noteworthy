@@ -136,6 +136,8 @@ class TextEditor extends React.Component {
           checklist={checkableListPlugin}
         />
 
+        <div className="line-break"></div>
+        
         <main className="editor">
           <Editor 
               editorState={this.state.editorState}

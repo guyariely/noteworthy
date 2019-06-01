@@ -2,6 +2,7 @@
 #toolbar {
   background: var(--background);
   border-bottom: 2px solid var(--separator);
+  padding: $xs 0;
 
   display: flex;
   justify-content: flex-start;
@@ -45,7 +46,7 @@
 
 .checkable-list-item-button {
   color: var(--icons);
-  margin: 3.5vh $xs 0 0;
+  margin-right: $xs;
   opacity: 1 !important;
 
   &.active > .checkable-list-item-button__inner {

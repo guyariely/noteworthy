@@ -1,10 +1,12 @@
 
 .notes {
   border-bottom: 2px solid var(--separator);
+
+  overflow: auto;
 }
 
 .note-container {
-  border-top: 2px solid var(--separator);
+  border-bottom: 2px solid var(--separator);
 }
 
 .note {
