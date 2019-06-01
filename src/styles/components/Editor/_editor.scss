@@ -1,6 +1,6 @@
 
 .DraftEditor-editorContainer {
-  padding-top: $m;
+  padding: $m;
 }
 
 .editor {
@@ -12,7 +12,6 @@
   line-height: 1.58;
 
   caret-color: var(--primary);
-  padding: 0 2.5rem 2rem 0;
 }
 
 ::selection {

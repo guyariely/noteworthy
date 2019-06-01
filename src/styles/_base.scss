@@ -5,7 +5,8 @@
   --sidebar: rgb(252, 251, 247);
   --notebooks-selection: rgba(214, 214, 214, 0.329);
   
-  --icons: rgb(77, 74, 71);
+  --icons: #565656;
+  --toolbar-icons: rgb(77, 74, 71);
   --separator: rgb(242, 237, 232); 
   --utils: #c0c0c0;
 
@@ -16,6 +17,8 @@
   --highlight: rgb(255, 233, 221);
   --code-color: rgb(36, 35, 34);
   --code-background: rgb(235, 235, 235);
+
+  --border: 1px solid var(--separator);
 }
 
 // spacing

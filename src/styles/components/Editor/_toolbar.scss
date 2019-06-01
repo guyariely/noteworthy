@@ -1,8 +1,8 @@
 
 #toolbar {
   background: var(--background);
-  border-bottom: 2px solid var(--separator);
-  padding: $xs 0;
+  border-bottom: var(--border);
+  padding: 15.4px;
 
   display: flex;
   justify-content: flex-start;
@@ -14,9 +14,9 @@
 
 .headersDropdown  {
   background: transparent;
-  color: var(--icons);
-  font-weight: 500;
-  margin-right: $xs;
+  color: var(--toolbar-icons);
+  font-weight: 700;
+  margin-right: 8px;
   border-style: none;
   
   &:hover {
@@ -25,7 +25,7 @@
 }
 
 .style-button {
-  color: var(--icons);
+  color: var(--toolbar-icons);
   margin: 0 $xs;
   background: none;
   border-style: none;
@@ -45,7 +45,7 @@
 }
 
 .checkable-list-item-button {
-  color: var(--icons);
+  color: var(--toolbar-icons);
   margin-right: $xs;
   opacity: 1 !important;
 
@@ -55,7 +55,7 @@
 }
 
 .checkable-list-item-button__inner {
-  color: var(--icons);
+  color: var(--toolbar-icons);
   width: 30px !important;
   height: 20px !important;
 

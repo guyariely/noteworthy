@@ -1,7 +1,7 @@
 import React from 'react';
 import Notebooks from './Notebooks';
 import Notes from './Notes';
-import Account from './Account';
+import Settings from './Settings';
 import Search from './Search';
 import NewNote from '../Editor/Utils/NewNote';
 
@@ -16,7 +16,7 @@ const Sidebar = props => {
     return (
       <aside className={className}>
         <div className="sidebar-notebooks">
-          <Account />
+          <Settings />
           <Notebooks />
         </div>
 

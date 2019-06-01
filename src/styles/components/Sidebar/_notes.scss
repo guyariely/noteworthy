@@ -1,17 +1,20 @@
 
 .notes {
-  border-bottom: 2px solid var(--separator);
+  border-bottom: var(--border);
 
   overflow: auto;
+
+  p, h4 {
+    margin: 6px;
+  }
+
+  p {
+    font-size: 14px;
+  }
 }
 
 .note-container {
-  border-bottom: 2px solid var(--separator);
-}
-
-.note {
-  padding: $m $s;
-  transition: border 0.1s;
+  transition: border 0.1s ease-in-out;
 
   &:hover {
     cursor: pointer;
@@ -19,6 +22,17 @@
   }
 }
 
-.note-title {
-  margin: 0;
+.note {
+  border-bottom: 0.8px solid var(--separator);
+  padding: 10px $s 10px 0;
+  margin-left: $s;
+
+  transition: border 0.1s ease-in-out;
+
+ &:hover {
+  border-bottom: 1px solid var(--primary);
+  border-top: 1px solid var(--primary);
+
+ }
 }
+

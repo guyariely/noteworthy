@@ -20,9 +20,10 @@ class Notes extends React.Component {
               className="note" 
               onMouseDown={this.props.openNote}
             >
-              <p className="note-title">
+              <h4 className="note-title">
                 {noteTitle}
-              </p>
+              </h4>
+              <p>some preview text of the note</p>
             </div>
           </div>
         

@@ -18,14 +18,15 @@
   font-size: $xs;
 
   display: grid;
-  grid-template-rows: auto auto; 
+  grid-template-rows: auto 1fr; 
+  height: 100vh;
 
   overflow: auto;
 }
 
 .sidebar-notes {
-  border-right: 2px solid var(--separator);
-  border-left: 2px solid var(--separator);
+  border-right: var(--border);
+  border-left: var(--border);
 
   display: grid;
   grid-template-rows: auto 1fr;
@@ -35,8 +36,8 @@
 }
 
 .sidebar-notes-header {
-  padding: $xs $xs;
-  border-bottom: 2px solid var(--separator);
+  padding: 11px;
+  border-bottom: var(--border);
 
   display: flex;
 }
@@ -44,17 +45,19 @@
 .sidebar-notes-header .util {
   margin-left: auto;
   color: var(--icons);
+  opacity: 0.5;
   font-size: 20px;
   margin-top: 6px;
   
   :hover {
     color: var(--primary);
     cursor: pointer;
+    opacity: 1;
   }
 }
 
 .sidebar .icon {
-  color: #565656;
+  color: var(--icons);
 }
 
 
