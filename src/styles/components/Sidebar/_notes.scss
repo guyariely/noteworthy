@@ -1,6 +1,5 @@
 
 .notes {
-  border-bottom: var(--border);
   padding-bottom: $m;
 
   overflow: auto;
@@ -20,6 +19,7 @@
   &:hover {
     cursor: pointer;
     border-left: 4px solid var(--primary);
+    background: var(--notes-selection);
   }
 }
 
@@ -30,10 +30,8 @@
 
   transition: border 0.1s ease-in-out;
 
- &:hover {
-  border-bottom: 0.8px solid var(--primary);
-  border-top: 0.8px solid var(--primary);
-
- }
+  &:hover {
+    border-bottom: 0.8px solid var(--notes-selection);
+  }
 }
 

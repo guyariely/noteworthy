@@ -38,21 +38,19 @@
 .sidebar-notes-header {
   padding: 11px;
   border-bottom: var(--border);
+  color: var(--toolbar-icons);
 
   display: flex;
 }
 
 .sidebar-notes-header .util {
   margin-left: auto;
-  color: var(--icons);
-  opacity: 0.5;
   font-size: 20px;
   margin-top: 6px;
   
   :hover {
     color: var(--primary);
     cursor: pointer;
-    opacity: 1;
   }
 }
 

@@ -1,9 +1,5 @@
   
-.checkable-list-item-block.is-checked {
-  opacity: 0.4;
-  text-decoration: line-through;
-}
-
+// quotes
 blockquote {
   border-left: 4px solid var(--primary) ;
   padding: 5px $xs; 
@@ -11,17 +7,30 @@ blockquote {
   margin: 0;
 }
 
+// code-blocks
+.public-DraftStyleDefault-pre {
+  padding: $xs;
+}
+
 pre {
   background: var(--code-background);
   color: var(--code-color);
-  padding: .5rem;
   margin: 0;
   border-radius: 0.2rem;
-  line-height: 0.5;
+
+  pre {
+    background: none;
+  }
 }
 
+// lists
 ul, ol {
   margin: 0 !important;
+}
+
+.checkable-list-item-block.is-checked {
+  opacity: 0.4;
+  text-decoration: line-through;
 }
 
 

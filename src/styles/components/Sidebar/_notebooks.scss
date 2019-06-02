@@ -1,6 +1,10 @@
 
 .notebooks {
   overflow: auto;
+
+  h4 {
+    margin: 0;
+  }
 }
 
 .notebooks-title {
@@ -11,7 +15,7 @@
 
   .icon {
     margin: 5px 0 0 $xs;
-    font-size: 14px;
+    font-size: 16px;
 
     transition: color 1s;
 

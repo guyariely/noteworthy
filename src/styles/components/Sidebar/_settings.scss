@@ -3,24 +3,21 @@
   padding: 16px $s;
   display: flex;
   border-bottom: var(--border);
+  color: var(--toolbar-icons);
 
   .app-title {
     font-weight: 700;
     font-size: $s;
-    opacity: 0.8;
   }
 
   .icon {
     margin-left: auto;
-    margin-top: 5px;
-    font-size: 18px;
-    color: var(--text);
-    opacity: 0.8;
+    margin-top: 6.5px;
+    font-size: 16px;
 
     &:hover {
       color: var(--primary);
       cursor: pointer;
-      opacity: 1;
     }
   }
 }

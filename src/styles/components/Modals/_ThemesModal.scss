@@ -5,7 +5,7 @@
     opacity: 0.5;
   }
 }
-
+ 
 .ReactModalPortal > div { 
   opacity: 0;
 }
@@ -42,20 +42,21 @@
 }
 
 .themes-title {
-  border-bottom: var(--border);
-  padding-bottom: $xs;
+
 }
 
 .themes-previews {
+  border-top: var(--border);
+
   overflow: auto;
-  padding-bottom: $s; 
+  padding: $s 0; 
 }
 
 .theme {
-  border: 1px solid rgb(105, 105, 105);
+  border: 1px solid var(--separator);
   border-radius: 5px;
   padding: $xs;
-  margin-top: $s;
+  margin-bottom: $s;
   line-height: 1.6;
 
   p {
@@ -99,7 +100,7 @@ code
   color: rgb(36, 35, 34);
 
   .preview-heading {
-    color: rgb(36, 35, 34);
+    color: rgb(239, 155, 110);
   }
 
   .preview-underline {
@@ -116,13 +117,13 @@ code
   }
 }
 
-.theme.dark {
+.theme.eclipse {
 
   background: rgb(46, 50, 53);
   color: rgb(225, 225, 225);
 
   .preview-heading {
-    color: rgb(225, 225, 225);
+    color: rgb(239, 155, 110);
   }
 
   .preview-underline {
@@ -139,3 +140,117 @@ code
   }
 }
 
+.theme.bloom {
+
+  background: #fff;
+  color: #222;
+
+  .preview-heading {
+    color: #ffa7c4;
+  }
+
+  .preview-underline {
+    text-decoration-color: #ffa7c4;
+  }
+
+  .preview-code {
+    color: #1a1a1a;
+    background: rgba(255,229,100,0.2);
+  }
+
+  .preview-highlight {
+    background: #ffd3ef;
+  }
+}
+
+.theme.gloom {
+
+  background: #282c35;
+  color: hsla(0,0%,100%,0.88);
+
+  .preview-heading {
+    color: #ffa7c4;
+  }
+
+  .preview-underline {
+    text-decoration-color: #ffa7c4;
+  }
+
+  .preview-code {
+    color: #f3a0bf;
+    background: #011627;
+  }
+
+  .preview-highlight {
+    background: #493943;
+  }
+}
+
+.theme.solarized {
+
+  background: rgb(253, 246, 227);
+  color: rgb(36, 35, 34);
+
+  .preview-heading {
+    color: rgb(66, 85, 89);
+  }
+
+  .preview-underline {
+    text-decoration-color: rgb(178, 138, 28);
+  }
+
+  .preview-code {
+    color: rgb(210, 226, 228);
+    background: rgb(0, 43, 54);
+  }
+
+  .preview-highlight {
+    background: rgb(255, 236, 174);
+  }
+}
+
+.theme.raspberry {
+
+  background: rgb(251, 251, 251);
+  color: rgb(36, 35, 34);
+
+  .preview-heading {
+    color: #E53B3B;
+  }
+
+  .preview-underline {
+    text-decoration-color: #E53B3B;
+  }
+
+  .preview-code {
+    color: rgb(36, 35, 34);
+    background: rgb(235, 235, 235);
+  }
+
+  .preview-highlight {
+    background: #FF9797;
+  }
+}
+
+.theme.ocean {
+
+  background: rgb(251, 251, 251);
+  color: rgb(36, 35, 34);
+
+  .preview-heading {
+    color: #1CB0F6;
+  }
+
+  .preview-underline {
+    text-decoration-color: #1CB0F6;
+  }
+
+  .preview-code {
+    color: rgb(36, 35, 34);
+    background: rgb(235, 235, 235);
+  }
+
+  .preview-highlight {
+    background: #BCE9FF;
+  }
+}

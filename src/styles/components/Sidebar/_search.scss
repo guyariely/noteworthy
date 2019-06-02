@@ -12,6 +12,7 @@
   input {
     border-style: none;
     background: none;
+    color: var(--text);
 
     line-height: 1;
     width: 80%;
@@ -22,6 +23,6 @@
 .search-bar .icon {
   margin: 10px;
 
-  opacity: 0.6;
-  filter: brightness(150%);
+  // opacity: 0.6;
+  // filter: brightness(150%);
 }

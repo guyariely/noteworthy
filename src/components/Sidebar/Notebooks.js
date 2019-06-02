@@ -9,7 +9,7 @@ const Notebooks = () => {
     <div className="notebooks">
 
       <p className="notebooks-title">
-        Library
+        <h4>Library</h4>
         <FontAwesomeIcon icon={faPlus} className="icon add-notebook"/>
         <FontAwesomeIcon icon={faPen} className="icon edit-notebooks"/>
       </p>
