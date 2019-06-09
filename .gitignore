@@ -12,7 +12,7 @@
 /build
 
 # other
-/src/cemetery
+/temp
 
 # misc
 .DS_Store

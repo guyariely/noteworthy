@@ -5,10 +5,7 @@ import Toolbar from './Toolbar';
 import QuickAccess from './QuickAccess';
 import { styleMap } from './InlineStyles';
 
-import createHighlightPlugin from '../plugins/highlightPlugin';
 import createCheckableListPlugin from 'draft-js-checkable-list-plugin';
-
-const highlightPlugin = createHighlightPlugin();
 const checkableListPlugin = createCheckableListPlugin();
 
 class TextEditor extends React.Component {
@@ -50,9 +47,9 @@ class TextEditor extends React.Component {
     };
 
     this.setDomEditorRef = ref => this.domEditor = ref;
-    this.plugins = [highlightPlugin, checkableListPlugin];
+    this.plugins = [checkableListPlugin];
   }
-
+  
   saveNote(note) {    
     window.localStorage.setItem(
       this.state.activeNote, 
