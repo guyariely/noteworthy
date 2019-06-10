@@ -1,8 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBold, faUnderline, faItalic, faHighlighter, faCode, faListOl, faListUl, faQuoteRight, faFileCode } from '@fortawesome/free-solid-svg-icons';
+import { faBold, faUnderline, faItalic, faStrikethrough, faHighlighter, faCode, faListOl, faListUl, faQuoteRight, faFileCode } from '@fortawesome/free-solid-svg-icons';
 
-const icons = { faBold, faUnderline, faItalic, faHighlighter, faCode, faListOl, faListUl, faQuoteRight, faFileCode };
+const icons = { faBold, faUnderline, faItalic, faStrikethrough, faHighlighter, faCode, faListOl, faListUl, faQuoteRight, faFileCode };
 
 const StyleButton = props => {
 
@@ -17,6 +17,7 @@ const StyleButton = props => {
     <button 
       className={`${props.style.toLowerCase()} ${className}`} 
       onMouseDown={onToggle}
+      onTouchEnd={onToggle}
     >
       <FontAwesomeIcon icon={icons[props.label]} />
     </button>

@@ -9,7 +9,7 @@ const ThemePreview = props => {
   return (
     <div
       className={`theme ${props.theme.toLowerCase()}`}
-      onMouseDown={switchTheme}
+      onClick={switchTheme}
     >
       <h3 className="preview-heading">{props.theme}</h3>
       <p>

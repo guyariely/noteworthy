@@ -132,8 +132,6 @@ class TextEditor extends React.Component {
           toggleInlineStyle={this.toggleInlineStyle}
           checklist={checkableListPlugin}
         />
-
-        <div className="line-break"></div>
         
         <main className="editor">
           <Editor 

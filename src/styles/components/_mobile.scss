@@ -1,0 +1,42 @@
+
+@media (max-width: 1024px) {
+
+  #editor-container {
+    grid-template: auto 1fr auto / auto;
+  }
+
+  .DraftEditor-editorContainer {
+    padding: $s;
+  }
+
+  #toolbar {
+    padding: 8px;
+    font-size: $xs;
+
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .quick-access {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+
+    padding: 8px $xs;
+    // border-top: var(--border);
+
+    justify-content: space-between;
+    flex-direction: row;
+    opacity: 1;
+
+    .util {
+      font-size: 1rem;
+      margin: 0;
+    }
+  }
+
+  .themes-modal {
+    max-width: 75%;
+  }
+ 
+
+}

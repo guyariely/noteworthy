@@ -18,7 +18,7 @@ class Notes extends React.Component {
           <div className="note-container" key={noteTitle}>
             <div 
               className="note" 
-              onMouseDown={this.props.openNote}
+              onClick={this.props.openNote}
             >
               <h4 className="note-title">
                 {noteTitle}

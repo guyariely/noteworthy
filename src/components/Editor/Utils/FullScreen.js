@@ -7,7 +7,7 @@ const FullScreen = props => {
   return (
     <span 
       className="util full-screen" 
-      onMouseDown={props.collapseSidebar}
+      onClick={props.collapseSidebar}
     >
       <FontAwesomeIcon 
         icon={props.isCollapsed ? faCompress : faExpand } 

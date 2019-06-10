@@ -5,7 +5,7 @@ import { faPalette } from '@fortawesome/free-solid-svg-icons';
 const SwitchThemes = props => {
 
   return (
-    <span className="util themes" onMouseDown={props.toggleThemesModal}>
+    <span className="util themes" onClick={props.toggleThemesModal}>
       <FontAwesomeIcon icon={faPalette} />
     </span>
   );

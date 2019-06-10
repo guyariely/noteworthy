@@ -13,7 +13,7 @@ const NewNote = props => {
   return (
     <span 
       className="util new-note"
-      onMouseDown={newNote}
+      onClick={newNote}
       >
       <FontAwesomeIcon icon={faEdit} />
     </span>

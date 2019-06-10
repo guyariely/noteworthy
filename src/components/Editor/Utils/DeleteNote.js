@@ -7,7 +7,7 @@ const DeleteNote = props => {
   return (
     <span 
       className="util delete-note"
-      onMouseDown={props.deleteNote}
+      onClick={props.deleteNote}
       >
       <FontAwesomeIcon icon={faRecycle} />
     </span>
