@@ -1,7 +1,8 @@
 // colors
 :root {
   --background: url(../images/white-wall.png);
-
+  --font: var(--san-serif);
+  
   --sidebar: rgb(252, 251, 247);
   --notebooks-selection: rgba(214, 214, 214, 0.329);
   --notes-selection: rgb(255, 233, 221);
@@ -20,6 +21,8 @@
 
   --border: 1px solid var(--separator);
   --white-wall: url(../images/white-wall.png);
+  --san-serif: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --serif: 'Playfair Display', serif;
 }
 
 // spacing
@@ -32,8 +35,13 @@ $xl: 4.8rem;
 html {
   background: var(--background);
   color: var(--text);
-  font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font);
   font-size: $s;
+}
+
+// for making the sidebar take the entire screen on mobile
+body {
+  position:fixed 
 }
 
 // hiding scrollbars

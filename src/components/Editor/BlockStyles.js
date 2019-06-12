@@ -10,13 +10,8 @@ const blockTypes = [
 
 const BlockStyles = props => {
 
-  const Checklist = props.checklist.Button;
-
   return (
     <div className="block-styles">
-      <div className="style-button">
-        <Checklist editorState={props.editorState} />
-      </div>
       {
         blockTypes.map(blockType => {
           return (
@@ -30,7 +25,6 @@ const BlockStyles = props => {
           );
         })
       }
-      
     </div>
   );
 };

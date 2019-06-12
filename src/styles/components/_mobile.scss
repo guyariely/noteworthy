@@ -22,16 +22,29 @@
     grid-row: 3 / 4;
 
     padding: 8px $xs;
-    // border-top: var(--border);
 
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction: row-reverse;
     opacity: 1;
 
     .util {
       font-size: 1rem;
       margin: 0;
     }
+  }
+
+  .sidebar {
+
+    width: 100vw;
+
+    .sidebar-notebooks {
+      display: none;
+    }
+
+    .sidebar-notes {
+      grid-column: 1 / 3;
+    }
+
   }
 
   .themes-modal {

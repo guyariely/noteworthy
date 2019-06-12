@@ -43,24 +43,4 @@
   display: flex;
 }
 
-.checkable-list-item-button {
-  color: var(--toolbar-icons);
-  opacity: 0.7;
-  margin-right: 11px;
-  opacity: 1 !important;
-
-  &.active > .checkable-list-item-button__inner {
-    color: var(--primary); 
-  }
-}
-
-.checkable-list-item-button__inner {
-  color: var(--toolbar-icons);
-  width: 22px !important;
-  height: 20px !important;
-
-  &:hover {
-    color: var(--primary);
-  }
-}
 

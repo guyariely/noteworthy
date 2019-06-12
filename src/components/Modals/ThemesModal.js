@@ -4,7 +4,7 @@ import ThemePreview from './ThemesModalPreview';
 
 const ThemesModal = props => {
 
-  const themes = ['Noteworthy', 'Eclipse', 'Bloom', 'Gloom', 'Solarized', 'Raspberry', 'Ocean'];
+  const themes = ['Noteworthy', 'Eclipse', 'Bloom', 'Gloom', 'Solarized', 'Newspaper', 'Raspberry', 'Ocean'];
 
   const switchTheme = theme => {
 
@@ -14,6 +14,7 @@ const ThemesModal = props => {
 
       case 'Noteworthy':
         style.setProperty('--background', 'var(--white-wall)');
+        style.setProperty('--font', 'var(--san-serif)');
         style.setProperty('--notebooks-selection', 'rgba(214, 214, 214, 0.329)');
         style.setProperty('--notes-selection', 'rgb(255, 233, 221)');
         style.setProperty('--icons', '#565656');
@@ -30,6 +31,7 @@ const ThemesModal = props => {
 
       case 'Eclipse':
           style.setProperty('--background', 'rgb(46, 50, 53)');
+          style.setProperty('--font', 'var(--san-serif)');
           style.setProperty('--notebooks-selection', 'rgba(214, 214, 214, 0.329)');
           style.setProperty('--notes-selection', 'rgb(76, 75, 75)');
           style.setProperty('--icons', 'rgb(218, 218, 218)');
@@ -46,6 +48,7 @@ const ThemesModal = props => {
 
         case 'Bloom':
           style.setProperty('--background', '#fff');
+          style.setProperty('--font', 'var(--san-serif)');
           style.setProperty('--notebooks-selection', 'rgba(214, 214, 214, 0.329)');
           style.setProperty('--notes-selection', '#ffe0f4');
           style.setProperty('--icons', '#565656');
@@ -62,6 +65,7 @@ const ThemesModal = props => {
 
         case 'Gloom':
           style.setProperty('--background', '#282c35');
+          style.setProperty('--font', 'var(--san-serif)');
           style.setProperty('--notebooks-selection', 'rgba(214, 214, 214, 0.329)'); 
           style.setProperty('--notes-selection', '#493943'); 
           style.setProperty('--icons', 'var(--text)'); 
@@ -78,22 +82,41 @@ const ThemesModal = props => {
 
         case 'Solarized':
           style.setProperty('--background', 'rgb(253, 246, 227)'); 
+          style.setProperty('--font', 'var(--san-serif)');
           style.setProperty('--notebooks-selection', 'rgba(214, 214, 214, 0.329)');
           style.setProperty('--notes-selection', 'rgb(248, 239, 210)'); 
           style.setProperty('--icons', '#565656');
           style.setProperty('--toolbar-icons', 'rgb(77, 74, 71)');
-          style.setProperty('--separator', 'rgb(242, 237, 232)'); // c
+          style.setProperty('--separator', 'rgb(242, 237, 232)'); 
           style.setProperty('--utils', '#c0c0c0');
           style.setProperty('--heading', 'rgb(66, 85, 89)');
           style.setProperty('--text', 'rgb(36, 35, 34)'); 
           style.setProperty('--primary', 'rgb(178, 138, 28)'); 
-          style.setProperty('--highlight', 'rgb(255, 236, 174)'); // c
+          style.setProperty('--highlight', 'rgb(255, 236, 174)'); 
           style.setProperty('--code-color', 'rgb(210, 226, 228)'); 
           style.setProperty('--code-background', 'rgb(0, 43, 54)'); 
           break;
 
+        case 'Newspaper':
+          style.setProperty('--background', '#fff');
+          style.setProperty('--font', 'var(--serif)');
+          style.setProperty('--notebooks-selection', 'rgba(214, 214, 214, 0.329)');
+          style.setProperty('--notes-selection', '#7fffdd');
+          style.setProperty('--icons', '#565656');
+          style.setProperty('--toolbar-icons', 'rgb(77, 74, 71)');
+          style.setProperty('--separator', 'rgb(242, 237, 232)');
+          style.setProperty('--utils', '#c0c0c0');
+          style.setProperty('--heading', '#222');
+          style.setProperty('--text', '#222');
+          style.setProperty('--primary', '#03a87c');
+          style.setProperty('--highlight', '#00ffbb');
+          style.setProperty('--code-color', 'rgb(36, 35, 34)');
+          style.setProperty('--code-background', 'rgb(235, 235, 235)');
+          break;
+
         case 'Raspberry':
           style.setProperty('--background', 'rgb(251, 251, 251)');
+          style.setProperty('--font', 'var(--san-serif)');
           style.setProperty('--notebooks-selection', 'rgba(214, 214, 214, 0.329)');
           style.setProperty('--notes-selection', '#ffbebe');
           style.setProperty('--icons', '#565656');
@@ -110,6 +133,7 @@ const ThemesModal = props => {
 
         case 'Ocean':
           style.setProperty('--background', 'rgb(251, 251, 251)');
+          style.setProperty('--font', 'var(--san-serif)');
           style.setProperty('--notebooks-selection', 'rgba(214, 214, 214, 0.329)');
           style.setProperty('--notes-selection', '#cceeff');
           style.setProperty('--icons', '#565656');
@@ -123,8 +147,6 @@ const ThemesModal = props => {
           style.setProperty('--code-color', 'rgb(36, 35, 34)');
           style.setProperty('--code-background', 'rgb(235, 235, 235)');
           break;
-
-        
 
       default:
         break;

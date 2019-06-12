@@ -41,10 +41,6 @@
   box-shadow: 3px 3px 5px 6px #ccc;
 }
 
-.themes-title {
-
-}
-
 .themes-previews {
   border-top: var(--border);
 
@@ -98,6 +94,7 @@ code
 .theme.noteworthy {
 
   color: rgb(36, 35, 34);
+  font-family: var(--san-serif);
 
   .preview-heading {
     color: rgb(239, 155, 110);
@@ -121,6 +118,7 @@ code
 
   background: rgb(46, 50, 53);
   color: rgb(225, 225, 225);
+  font-family: var(--san-serif);
 
   .preview-heading {
     color: rgb(239, 155, 110);
@@ -144,6 +142,7 @@ code
 
   background: #fff;
   color: #222;
+  font-family: var(--san-serif);
 
   .preview-heading {
     color: #ffa7c4;
@@ -167,6 +166,7 @@ code
 
   background: #282c35;
   color: hsla(0,0%,100%,0.88);
+  font-family: var(--san-serif);
 
   .preview-heading {
     color: #ffa7c4;
@@ -190,6 +190,7 @@ code
 
   background: rgb(253, 246, 227);
   color: rgb(36, 35, 34);
+  font-family: var(--san-serif);
 
   .preview-heading {
     color: rgb(66, 85, 89);
@@ -209,10 +210,36 @@ code
   }
 }
 
+
+.theme.newspaper {
+
+  background: rgb(251, 251, 251);
+  color: rgb(36, 35, 34);
+  font-family: var(--serif);
+
+  .preview-heading {
+    color: #03a87c;
+  }
+
+  .preview-underline {
+    text-decoration-color: #03a87c;
+  }
+
+  .preview-code {
+    color: rgb(36, 35, 34);
+    background: rgb(235, 235, 235);
+  }
+
+  .preview-highlight {
+    background: #00ffbb;
+  }
+}
+
 .theme.raspberry {
 
   background: rgb(251, 251, 251);
   color: rgb(36, 35, 34);
+  font-family: var(--san-serif);
 
   .preview-heading {
     color: #E53B3B;
@@ -236,6 +263,7 @@ code
 
   background: rgb(251, 251, 251);
   color: rgb(36, 35, 34);
+  font-family: var(--san-serif);
 
   .preview-heading {
     color: #1CB0F6;

@@ -14,7 +14,7 @@ class App extends React.Component {
 
      this.state = {
       sidebarIsCollapsed: false,
-      isOpen: false
+      modalIsOpen: false
     };
   }
 
@@ -28,12 +28,16 @@ class App extends React.Component {
 
   toggleThemesModal() {
     this.setState((prevState) => {
-      return ({isOpen: !prevState.isOpen});
+      return ({modalIsOpen: !prevState.modalIsOpen});
     });
   }
 
   openNote(noteTitle) {
     this.refs.textEditor.openNote(noteTitle);
+
+    if (window.innerWidth <= 1024) {
+      this.setState({sidebarIsCollapsed: true});
+    }
   }
 
   newNote(noteTitle) {
@@ -59,7 +63,7 @@ class App extends React.Component {
         />
 
         <ThemesModal
-          isOpen={this.state.isOpen}
+          isOpen={this.state.modalIsOpen}
           toggleThemesModal={this.toggleThemesModal}
         />
         

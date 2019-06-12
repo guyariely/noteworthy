@@ -27,7 +27,6 @@ const Toolbar = props => {
       <BlockStyles
         activeBlock={activeBlock}
         toggleBlockType={props.toggleBlockType}
-        checklist={props.checklist}
         editorState={editorState}
       />
 

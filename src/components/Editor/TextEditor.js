@@ -1,12 +1,8 @@
 import React from 'react';
-import { EditorState, RichUtils, convertToRaw, convertFromRaw } from 'draft-js';
-import Editor from 'draft-js-plugins-editor';
+import { Editor, EditorState, RichUtils, convertToRaw, convertFromRaw } from 'draft-js';
 import Toolbar from './Toolbar';
 import QuickAccess from './QuickAccess';
 import { styleMap } from './InlineStyles';
-
-import createCheckableListPlugin from 'draft-js-checkable-list-plugin';
-const checkableListPlugin = createCheckableListPlugin();
 
 class TextEditor extends React.Component {
 
@@ -47,7 +43,6 @@ class TextEditor extends React.Component {
     };
 
     this.setDomEditorRef = ref => this.domEditor = ref;
-    this.plugins = [checkableListPlugin];
   }
   
   saveNote(note) {    
@@ -130,7 +125,6 @@ class TextEditor extends React.Component {
           editorState={this.state.editorState} 
           toggleBlockType={this.toggleBlockType}
           toggleInlineStyle={this.toggleInlineStyle}
-          checklist={checkableListPlugin}
         />
         
         <main className="editor">
@@ -139,7 +133,6 @@ class TextEditor extends React.Component {
               customStyleMap={styleMap}
               handleKeyCommand={this.handleKeyCommand}
               onChange={this.onChange}
-              plugins={this.plugins}
               ref={this.setDomEditorRef}
             />
         </main>
