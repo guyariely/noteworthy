@@ -39,11 +39,6 @@ html {
   font-size: $s;
 }
 
-// for making the sidebar take the entire screen on mobile
-body {
-  position:fixed 
-}
-
 // hiding scrollbars
 ::-webkit-scrollbar { 
   display: none !important; 
