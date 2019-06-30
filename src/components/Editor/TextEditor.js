@@ -1,8 +1,33 @@
 import React from 'react';
-import { Editor, EditorState, RichUtils, convertToRaw, convertFromRaw } from 'draft-js';
+import { Editor, EditorState, RichUtils, convertToRaw, convertFromRaw, getDefaultKeyBinding, KeyBindingUtil } from 'draft-js';
 import Toolbar from './Toolbar';
 import QuickAccess from './QuickAccess';
 import { styleMap } from './InlineStyles';
+
+const {hasCommandModifier} = KeyBindingUtil;
+
+const myKeyBindingFn = e => {
+  
+  if (hasCommandModifier(e)) {
+    switch(e.keyCode) {
+      case 72 /* H */:
+        return 'HIGHLIGHT';
+      case 89 /* Y */:
+        return 'CODE';
+      case 83 /* S */: 
+        return 'STRIKETHROUGH';
+    }
+  }
+  else if (e.nativeEvent.altKey) {
+    switch (e.keyCode) {
+      case 84: 
+        return 'header-one';
+      case 72:
+        return 'header-two';
+    }
+  }
+  return getDefaultKeyBinding(e);
+};
 
 class TextEditor extends React.Component {
 
@@ -96,6 +121,14 @@ class TextEditor extends React.Component {
     if (newState) {
       this.onChange(newState);
       return 'handled';
+    } 
+    else if (['HIGHLIGHT', 'CODE', 'STRIKETHROUGH'].includes(command)) {
+      this.toggleInlineStyle(command);
+      return 'handled';
+    } 
+    else if (['header-one', 'header-two'].includes(command)) { 
+      this.toggleBlockType(command);
+      return 'handled';
     }
     return 'not-handled';
   }
@@ -129,12 +162,13 @@ class TextEditor extends React.Component {
         
         <main className="editor">
           <Editor 
-              editorState={this.state.editorState}
-              customStyleMap={styleMap}
-              handleKeyCommand={this.handleKeyCommand}
-              onChange={this.onChange}
-              ref={this.setDomEditorRef}
-            />
+            editorState={this.state.editorState}
+            customStyleMap={styleMap}
+            handleKeyCommand={this.handleKeyCommand}
+            keyBindingFn={myKeyBindingFn}
+            onChange={this.onChange}
+            ref={this.setDomEditorRef}
+          />
         </main>
           
           <QuickAccess 

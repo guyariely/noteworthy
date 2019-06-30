@@ -4,12 +4,13 @@ blockquote {
   border-left: 4px solid var(--primary) ;
   padding: 5px $xs; 
   opacity: 0.8;
-  margin: 0;
+  margin: 16px 0;
 }
 
 // code-blocks
 .public-DraftStyleDefault-pre {
   padding: $xs;
+  margin: 16px 0;
 }
 
 pre {
@@ -24,9 +25,7 @@ pre {
 }
 
 // lists
-ul, ol {
-  margin: 0 !important;
-}
+// ul, ol { }
 
 
 
