@@ -1,44 +1,42 @@
-import React from 'react';
-import StyleButton from './StyleButton';
+import React from "react";
+import StyleButton from "./StyleButton";
 
 const inlineTypes = [
-  { label: "faBold", style: "BOLD" },  
+  { label: "faBold", style: "BOLD" },
   { label: "faItalic", style: "ITALIC" },
   { label: "faUnderline", style: "UNDERLINE" },
-  { label: "faStrikethrough", style: "STRIKETHROUGH"},
+  { label: "faStrikethrough", style: "STRIKETHROUGH" },
   { label: "faHighlighter", style: "HIGHLIGHT" },
-  { label: "faCode", style: "CODE" }
+  { label: "faCode", style: "CODE" },
 ];
 
 export const styleMap = {
-  'CODE': {
-    color: 'var(--code-color)',
-    fontFamily: 'monospace',
-    borderRadius: '2px',
-    background: 'var(--code-background)',
-    padding: '3px 5px'
+  CODE: {
+    color: "var(--code-color)",
+    fontFamily: "monospace",
+    borderRadius: "2px",
+    background: "var(--code-background)",
+    padding: "3px 5px",
   },
-  'HIGHLIGHT': {
+  HIGHLIGHT: {
     background: "var(--highlight)",
-    padding: '1px 5px'
+    padding: "1px 5px",
   },
-  'UNDERLINE': {
-    textDecoration: 'underline solid var(--primary)',
+  UNDERLINE: {
+    textDecoration: "underline solid var(--primary)",
   },
-  'STRIKETHROUGH': {
-    opacity: '0.4',
-    textDecoration: 'line-through'
-  }
+  STRIKETHROUGH: {
+    opacity: "0.4",
+    textDecoration: "line-through",
+  },
 };
-  
-const InlineStyles = props => {
 
+const InlineStyles = props => {
   return (
     <div className="inline-styles">
-    {
-      inlineTypes.map(inlineType => {
+      {inlineTypes.map(inlineType => {
         return (
-          <StyleButton 
+          <StyleButton
             key={inlineType.label}
             label={inlineType.label}
             style={inlineType.style}
@@ -46,8 +44,7 @@ const InlineStyles = props => {
             active={props.activeStyle.has(inlineType.style)}
           />
         );
-      })
-    }
+      })}
     </div>
   );
 };

@@ -1,20 +1,13 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEdit } from '@fortawesome/free-regular-svg-icons';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEdit } from "@fortawesome/free-regular-svg-icons";
 
-
-const NewNote = props => {
-
-  const newNote = () => {
-    const noteTitle = prompt('enter a note title');
-    props.newNote(noteTitle);
-  };
- 
+const NewNote = ({ createNote }) => {
   return (
-    <span 
+    <span
       className="util new-note"
-      onClick={newNote}
-      >
+      onClick={() => createNote(prompt("enter a note title"))}
+    >
       <FontAwesomeIcon icon={faEdit} />
     </span>
   );

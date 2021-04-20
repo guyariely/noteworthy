@@ -1,17 +1,19 @@
-import React from 'react';
-import NewNote from './Utils/NewNote';
-import DeleteNote from './Utils/DeleteNote';
-import SwitchThemes from './Utils/SwitchThemes';
-import FullScreen from './Utils/FullScreen';
+import React from "react";
+import NewNote from "./Utils/NewNote";
+import DeleteNote from "./Utils/DeleteNote";
+import SwitchThemes from "./Utils/SwitchThemes";
+import FullScreen from "./Utils/FullScreen";
 
 const QuickAccess = props => {
-
   return (
     <div className="quick-access">
-      <NewNote newNote={props.newNote} />     
+      <NewNote newNote={props.addNote} />
       <DeleteNote deleteNote={props.deleteNote} />
-      <SwitchThemes toggleThemesModal={props.toggleThemesModal}/>
-      <FullScreen isCollapsed={props.isCollapsed} collapseSidebar={props.collapseSidebar} />
+      <SwitchThemes toggleThemesModal={props.toggleThemesModal} />
+      <FullScreen
+        isCollapsed={props.isCollapsed}
+        collapseSidebar={props.collapseSidebar}
+      />
     </div>
   );
 };

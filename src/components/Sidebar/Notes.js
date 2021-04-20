@@ -1,38 +1,20 @@
-import React from 'react';
+import React from "react";
+import Note from "./Note";
 
-class Notes extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      notesList: Object.keys(window.localStorage)
-    };
- }
-
- render() {
-   
-   return (
+function Notes({ notes, openNote }) {
+  return (
     <div className="notes">
-    {
-      this.state.notesList.map((noteTitle) => {
-        return (
-          <div className="note-container" key={noteTitle}>
-            <div 
-              className="note" 
-              onClick={this.props.openNote}
-            >
-              <h4 className="note-title">
-                {noteTitle}
-              </h4>
-              <p>some preview text of the note</p>
-            </div>
-          </div>
-        
-        );
-      })
-    }
+      {notes.length > 0 &&
+        notes.map(note => (
+          <Note
+            title={note.title}
+            id={note.id}
+            key={note.id}
+            openNote={openNote}
+          />
+        ))}
     </div>
   );
- }
 }
 
 export default Notes;

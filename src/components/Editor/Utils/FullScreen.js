@@ -1,24 +1,11 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExpand, faCompress, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExpand, faCompress } from "@fortawesome/free-solid-svg-icons";
 
-const FullScreen = props => {
-
-  let icon;
-  if (window.innerWidth <= 1024) {
-    icon = faChevronLeft;
-  } else {
-    icon = props.isCollapsed ? faCompress : faExpand;
-  }
-
+const FullScreen = ({ collapseSidebar, isCollapsed }) => {
   return (
-    <span 
-      className="util full-screen" 
-      onClick={props.collapseSidebar}
-    >
-      <FontAwesomeIcon 
-        icon={icon}
-      />
+    <span className="util full-screen" onClick={collapseSidebar}>
+      <FontAwesomeIcon icon={isCollapsed ? faCompress : faExpand} />
     </span>
   );
 };
