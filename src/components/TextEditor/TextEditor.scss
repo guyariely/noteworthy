@@ -1,0 +1,26 @@
+#editor-container {
+  height: 100vh;
+  display: grid;
+  grid-template: 60px auto / auto 65px;
+}
+
+.DraftEditor-editorContainer {
+  padding: 1.6rem;
+}
+
+.editor {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+
+  overflow: auto;
+  padding-bottom: 28rem;
+
+  line-height: 1.58;
+
+  caret-color: var(--primary);
+}
+
+::selection {
+  background: var(--primary);
+  color: white;
+}

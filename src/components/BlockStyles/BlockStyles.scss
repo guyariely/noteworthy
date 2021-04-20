@@ -1,0 +1,24 @@
+// quotes
+blockquote {
+  border-left: 4px solid var(--primary);
+  padding: 5px 0.8rem;
+  opacity: 0.8;
+  margin: 16px 0;
+}
+
+// code-blocks
+.public-DraftStyleDefault-pre {
+  padding: 0.8rem;
+  margin: 16px 0;
+}
+
+pre {
+  background: var(--code-background);
+  color: var(--code-color);
+  margin: 0;
+  border-radius: 0.2rem;
+
+  pre {
+    background: none;
+  }
+}

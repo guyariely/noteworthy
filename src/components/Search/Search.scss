@@ -1,0 +1,24 @@
+.search-bar {
+  border: var(--border);
+  border-radius: 10px;
+  font-size: 14px;
+
+  margin-right: 0.8rem;
+
+  display: flex;
+  flex: 1;
+
+  .search-bar-input {
+    border-style: none;
+    background: none;
+    color: var(--text);
+
+    line-height: 1;
+    width: 80%;
+    overflow: auto;
+  }
+}
+
+.search-bar .icon {
+  margin: 10px;
+}

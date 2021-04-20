@@ -1,0 +1,264 @@
+.ReactModal__Body--open {
+  .editor {
+    opacity: 0.5;
+  }
+}
+
+.ReactModalPortal > div {
+  opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.themes-modal {
+  background: var(--background);
+  border-radius: 5px;
+  color: var(--text);
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+
+  max-width: 45%;
+  max-height: 70%;
+  padding: 1.2rem 1.2rem 0 1.2rem;
+
+  box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+.themes-previews {
+  border-top: var(--border);
+
+  overflow: auto;
+  padding: 1.2rem 0;
+}
+
+.theme {
+  border: 1px solid var(--separator);
+  border-radius: 5px;
+  padding: 0.8rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+
+  p {
+    margin: 0;
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  .preview-underline {
+    text-decoration: underline;
+  }
+
+  .preview-code {
+    font-family: monospace;
+    border-radius: 2px;
+    padding: 3px 5px;
+  }
+
+  .preview-highlight {
+    padding: 1px 5px;
+  }
+
+  &:hover {
+    // box-shadow: 3px 3px 5px 6px #ccc;
+    cursor: pointer;
+  }
+}
+
+.theme.noteworthy {
+  color: rgb(36, 35, 34);
+  font-family: var(--san-serif);
+
+  .preview-heading {
+    color: rgb(239, 155, 110);
+  }
+
+  .preview-underline {
+    text-decoration-color: rgb(239, 155, 110);
+  }
+
+  .preview-code {
+    color: rgb(36, 35, 34);
+    background: rgb(235, 235, 235);
+  }
+
+  .preview-highlight {
+    background: rgb(255, 233, 221);
+  }
+}
+
+.theme.eclipse {
+  background: rgb(46, 50, 53);
+  color: rgb(225, 225, 225);
+  font-family: var(--san-serif);
+
+  .preview-heading {
+    color: rgb(239, 155, 110);
+  }
+
+  .preview-underline {
+    text-decoration-color: rgb(239, 155, 110);
+  }
+
+  .preview-code {
+    color: rgb(235, 235, 235);
+    background: rgb(75, 75, 75);
+  }
+
+  .preview-highlight {
+    background: rgb(179, 105, 66);
+  }
+}
+
+.theme.bloom {
+  background: #fff;
+  color: #222;
+  font-family: var(--san-serif);
+
+  .preview-heading {
+    color: #ffa7c4;
+  }
+
+  .preview-underline {
+    text-decoration-color: #ffa7c4;
+  }
+
+  .preview-code {
+    color: #1a1a1a;
+    background: rgba(255, 229, 100, 0.2);
+  }
+
+  .preview-highlight {
+    background: #ffd3ef;
+  }
+}
+
+.theme.gloom {
+  background: #282c35;
+  color: hsla(0, 0%, 100%, 0.88);
+  font-family: var(--san-serif);
+
+  .preview-heading {
+    color: #ffa7c4;
+  }
+
+  .preview-underline {
+    text-decoration-color: #ffa7c4;
+  }
+
+  .preview-code {
+    color: #f3a0bf;
+    background: #011627;
+  }
+
+  .preview-highlight {
+    background: #493943;
+  }
+}
+
+.theme.solarized {
+  background: rgb(253, 246, 227);
+  color: rgb(36, 35, 34);
+  font-family: var(--san-serif);
+
+  .preview-heading {
+    color: rgb(66, 85, 89);
+  }
+
+  .preview-underline {
+    text-decoration-color: rgb(178, 138, 28);
+  }
+
+  .preview-code {
+    color: rgb(210, 226, 228);
+    background: rgb(0, 43, 54);
+  }
+
+  .preview-highlight {
+    background: rgb(255, 236, 174);
+  }
+}
+
+.theme.newspaper {
+  background: rgb(251, 251, 251);
+  color: rgb(36, 35, 34);
+  font-family: var(--serif);
+
+  .preview-heading {
+    color: #03a87c;
+  }
+
+  .preview-underline {
+    text-decoration-color: #03a87c;
+  }
+
+  .preview-code {
+    color: rgb(36, 35, 34);
+    background: rgb(235, 235, 235);
+  }
+
+  .preview-highlight {
+    background: #00ffbb;
+  }
+}
+
+.theme.raspberry {
+  background: rgb(251, 251, 251);
+  color: rgb(36, 35, 34);
+  font-family: var(--san-serif);
+
+  .preview-heading {
+    color: #e53b3b;
+  }
+
+  .preview-underline {
+    text-decoration-color: #e53b3b;
+  }
+
+  .preview-code {
+    color: rgb(36, 35, 34);
+    background: rgb(235, 235, 235);
+  }
+
+  .preview-highlight {
+    background: #ff9797;
+  }
+}
+
+.theme.ocean {
+  background: rgb(251, 251, 251);
+  color: rgb(36, 35, 34);
+  font-family: var(--san-serif);
+
+  .preview-heading {
+    color: #1cb0f6;
+  }
+
+  .preview-underline {
+    text-decoration-color: #1cb0f6;
+  }
+
+  .preview-code {
+    color: rgb(36, 35, 34);
+    background: rgb(235, 235, 235);
+  }
+
+  .preview-highlight {
+    background: #bce9ff;
+  }
+}

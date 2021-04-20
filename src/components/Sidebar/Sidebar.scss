@@ -1,0 +1,37 @@
+.sidebar {
+  transition: width 0.35s;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 60px auto;
+  border-right: var(--border);
+  border-left: var(--border);
+  overflow: auto;
+  width: 300px;
+
+  &.collapsed {
+    width: 0;
+  }
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  padding: 11px;
+  border-bottom: var(--border);
+  color: var(--toolbar-icons);
+}
+
+.sidebar-notes-header .util {
+  margin-left: auto;
+  font-size: 20px;
+  margin-top: 6px;
+
+  :hover {
+    color: var(--primary);
+    cursor: pointer;
+  }
+}
+
+.sidebar .icon {
+  color: var(--icons);
+}
