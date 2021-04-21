@@ -1,19 +1,29 @@
 import React from "react";
-import NewNote from "../Utils/NewNote";
-import DeleteNote from "../Utils/DeleteNote";
-import SwitchThemes from "../Utils/SwitchThemes";
-import FullScreen from "../Utils/FullScreen";
+import QuickAccessButton from "../QuickAccessButton/QuickAccessButton";
 import "./QuickAccess.scss";
 
 const QuickAccess = props => {
   return (
     <div className="quick-access">
-      <NewNote newNote={props.addNote} />
-      <DeleteNote deleteNote={props.deleteNote} />
-      <SwitchThemes toggleThemesModal={props.toggleThemesModal} />
-      <FullScreen
-        isCollapsed={props.isCollapsed}
-        collapseSidebar={props.collapseSidebar}
+      <QuickAccessButton
+        type="add"
+        handleClick={() => props.addNote(prompt("enter a note title"))}
+        isSidebarCollapsed={props.isSidebarCollapsed}
+      />
+      <QuickAccessButton
+        type="delete"
+        handleClick={props.deleteNote}
+        isSidebarCollapsed={props.isSidebarCollapsed}
+      />
+      <QuickAccessButton
+        type="themes"
+        handleClick={props.toggleThemesModal}
+        isSidebarCollapsed={props.isSidebarCollapsed}
+      />
+      <QuickAccessButton
+        type="expand"
+        handleClick={props.collapseSidebar}
+        isSidebarCollapsed={props.isSidebarCollapsed}
       />
     </div>
   );

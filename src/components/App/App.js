@@ -1,25 +1,19 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import TextEditor from "../TextEditor/TextEditor";
 import Sidebar from "../Sidebar/Sidebar";
 import ThemesModal from "../ThemesModal/ThemesModal";
 import defaultNotes from "../../defaultNotes";
-import { EditorState, convertFromRaw, RichUtils, convertToRaw } from "draft-js";
+import { EditorState, RichUtils } from "draft-js";
+import { converter } from "../../utils/utils";
 import { v4 as uuid } from "uuid";
 import "./App.scss";
 
-const converter = {
-  toContent: editorState => convertToRaw(editorState.getCurrentContent()),
-  toEditorState: note => {
-    return EditorState.createWithContent(convertFromRaw(note.content));
-  },
-};
-
 function App() {
+  const [searchInput, setSearchInput] = useState("");
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [sidebarIsCollapsed, setSidebarIsCollapsed] = useState(false);
   const [notes, setNotes] = useState([]);
   const [currentNoteId, setCurrentNoteId] = useState(null);
-  const editorRef = useRef(null);
   const [editorState, setEditorState] = useState(() =>
     EditorState.createEmpty()
   );
@@ -49,7 +43,6 @@ function App() {
 
   useEffect(() => {
     if (notes.length > 0) {
-      editorRef.current.focus();
       updateNote(editorState);
     }
   }, [editorState]);
@@ -92,9 +85,10 @@ function App() {
     return newNote;
   }
 
-  function deleteNote(id) {
-    const updatedNotes = notes.filter(note => note.id !== id);
+  function deleteNote() {
+    const updatedNotes = notes.filter(note => note.id !== currentNoteId);
     setNotes(updatedNotes);
+    setCurrentNoteId(null);
   }
 
   function collapseSidebar() {
@@ -113,12 +107,24 @@ function App() {
     onChangeEditorState(RichUtils.toggleInlineStyle(editorState, style));
   }
 
+  function getSearchResults() {
+    const searchResults = notes.filter(
+      note =>
+        converter.toText(note).includes(searchInput) ||
+        note.title.includes(searchInput)
+    );
+    return searchResults;
+  }
+
   return (
     <div id="app-container">
       <Sidebar
         isCollapsed={sidebarIsCollapsed}
         openNote={openNote}
-        notes={notes}
+        notes={searchInput ? getSearchResults() : notes}
+        searchInput={searchInput}
+        setSearchInput={setSearchInput}
+        currentNoteId={currentNoteId}
       />
       <TextEditor
         editorState={editorState}
@@ -130,7 +136,6 @@ function App() {
         onChangeEditorState={onChangeEditorState}
         addNote={addNote}
         deleteNote={deleteNote}
-        editorRef={editorRef}
       />
       <ThemesModal isOpen={modalIsOpen} toggleThemesModal={toggleThemesModal} />
     </div>

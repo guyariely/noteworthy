@@ -3,6 +3,9 @@
 
   &:hover {
     cursor: pointer;
+  }
+
+  &.active {
     border-left: 4px solid var(--primary);
     background: var(--notes-selection);
   }
@@ -26,5 +29,7 @@
 }
 
 .note-preview {
-  margin: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

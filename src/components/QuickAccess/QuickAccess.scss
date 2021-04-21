@@ -13,19 +13,3 @@
     opacity: 0.8;
   }
 }
-
-.quick-access .util {
-  color: var(--utils);
-  margin: 0.6rem 0;
-  font-size: 1.33rem;
-
-  &:hover {
-    color: var(--primary);
-    opacity: 1;
-    cursor: pointer;
-  }
-}
-
-.quick-access .themes {
-  margin-top: auto;
-}

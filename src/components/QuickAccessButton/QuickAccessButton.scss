@@ -1,0 +1,15 @@
+.quick-access-button {
+  color: var(--utils);
+  margin: 0.6rem 0;
+  font-size: 1.33rem;
+
+  &:hover {
+    color: var(--primary);
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+.quick-access-button.themes {
+  margin-top: auto;
+}

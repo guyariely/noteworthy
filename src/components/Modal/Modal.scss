@@ -1,0 +1,21 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0px;
+  background: none;
+  z-index: 1;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  outline: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

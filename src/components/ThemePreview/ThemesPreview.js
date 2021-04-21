@@ -1,4 +1,5 @@
 import React from "react";
+import "./ThemesPreview.scss";
 
 const ThemePreview = props => {
   const switchTheme = () => {
@@ -6,7 +7,10 @@ const ThemePreview = props => {
   };
 
   return (
-    <div className={`theme ${props.theme.toLowerCase()}`} onClick={switchTheme}>
+    <div
+      className={`theme-preview ${props.theme.toLowerCase()}`}
+      onClick={switchTheme}
+    >
       <h3 className="preview-heading">{props.theme}</h3>
       <p>
         This is a preview of the '{props.theme}' theme. Here are some inline

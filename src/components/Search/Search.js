@@ -1,17 +1,16 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "./Search.scss";
 
-const Search = () => {
+const Search = ({ searchInput, setSearchInput }) => {
   return (
     <div className="search-bar">
-      <FontAwesomeIcon icon={faSearch} className="icon" />
       <input
         className="search-bar-input"
         type="text"
-        placeholder="Search Notes"
+        placeholder="Search notes..."
         spellCheck="false"
+        onChange={e => setSearchInput(e.target.value)}
+        value={searchInput}
       />
     </div>
   );

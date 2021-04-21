@@ -1,7 +1,6 @@
 import React from "react";
 import Notes from "../Notes/Notes";
 import Search from "../Search/Search";
-import NewNote from "../Utils/NewNote";
 import "./Sidebar.scss";
 
 const Sidebar = props => {
@@ -10,10 +9,16 @@ const Sidebar = props => {
   return (
     <aside className={className}>
       <div className="sidebar-header">
-        <Search />
-        <NewNote createNote={props.createNote} />
+        <Search
+          searchInput={props.searchInput}
+          setSearchInput={props.setSearchInput}
+        />
       </div>
-      <Notes openNote={props.openNote} notes={props.notes} />
+      <Notes
+        currentNoteId={props.currentNoteId}
+        openNote={props.openNote}
+        notes={props.notes}
+      />
     </aside>
   );
 };

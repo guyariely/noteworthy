@@ -1,30 +1,3 @@
-// colors
-:root {
-  --background: url(../images/white-wall.png);
-  --font: var(--san-serif);
-
-  --sidebar: rgb(252, 251, 247);
-  --notebooks-selection: rgba(214, 214, 214, 0.329);
-  --notes-selection: rgb(255, 233, 221);
-
-  --icons: #565656;
-  --toolbar-icons: rgb(77, 74, 71);
-  --separator: rgb(242, 237, 232);
-  --utils: #c0c0c0;
-
-  --heading: rgb(36, 35, 34);
-  --text: rgb(36, 35, 34);
-  --primary: rgb(239, 155, 110);
-  --highlight: rgb(255, 233, 221);
-  --code-color: rgb(36, 35, 34);
-  --code-background: rgb(235, 235, 235);
-
-  --border: 1px solid var(--separator);
-  --white-wall: url(../images/white-wall.png);
-  --san-serif: "Nunito", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  --serif: "Playfair Display", serif;
-}
-
 html {
   background: var(--background);
   color: var(--text);
