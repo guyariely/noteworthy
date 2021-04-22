@@ -1,7 +1,6 @@
 export default [
   {
     id: "0ca88a56-a19a-11eb-bcbc-0242ac130002",
-    title: "welcome",
     content: {
       blocks: [
         {
@@ -309,7 +308,6 @@ export default [
   },
   {
     id: "0ca88a56-a19a-11eb-bcbc-0242ac130003",
-    title: "welcome",
     content: {
       blocks: [
         {

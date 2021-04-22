@@ -7,7 +7,7 @@ const QuickAccess = props => {
     <div className="quick-access">
       <QuickAccessButton
         type="add"
-        handleClick={() => props.addNote(prompt("enter a note title"))}
+        handleClick={props.addNote}
         isSidebarCollapsed={props.isSidebarCollapsed}
       />
       <QuickAccessButton

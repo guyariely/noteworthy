@@ -10,7 +10,7 @@ import "./App.scss";
 
 function App() {
   const [searchInput, setSearchInput] = useState("");
-  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [themeModalIsOpen, setThemeModalIsOpen] = useState(false);
   const [sidebarIsCollapsed, setSidebarIsCollapsed] = useState(false);
   const [notes, setNotes] = useState([]);
   const [currentNoteId, setCurrentNoteId] = useState(null);
@@ -45,6 +45,7 @@ function App() {
     if (notes.length > 0) {
       updateNote(editorState);
     }
+    console.log(converter.toContent(editorState));
   }, [editorState]);
 
   function updateNote(editorState) {
@@ -67,20 +68,22 @@ function App() {
     setEditorState(converter.toEditorState(noteToOpen));
   }
 
-  function addNote(title) {
-    if (title === null) return;
-
-    const newNote = createEmptyNote(title);
+  function addNote() {
+    const newNote = createEmptyNote();
     setNotes([...notes, newNote]);
     setCurrentNoteId(newNote.id);
     setEditorState(converter.toEditorState(newNote));
   }
 
-  function createEmptyNote(title) {
+  function createEmptyNote() {
+    const emptyEditorState = RichUtils.toggleBlockType(
+      EditorState.createEmpty(),
+      "header-one"
+    );
+
     const newNote = {
       id: uuid(),
-      title: title,
-      content: converter.toContent(EditorState.createEmpty()),
+      content: converter.toContent(emptyEditorState),
     };
     return newNote;
   }
@@ -95,10 +98,6 @@ function App() {
     setSidebarIsCollapsed(sidebarIsCollapsed => !sidebarIsCollapsed);
   }
 
-  function toggleThemesModal() {
-    setModalIsOpen(modalIsOpen => !modalIsOpen);
-  }
-
   function toggleBlockType(blockType) {
     onChangeEditorState(RichUtils.toggleBlockType(editorState, blockType));
   }
@@ -108,10 +107,8 @@ function App() {
   }
 
   function getSearchResults() {
-    const searchResults = notes.filter(
-      note =>
-        converter.toText(note).includes(searchInput) ||
-        note.title.includes(searchInput)
+    const searchResults = notes.filter(note =>
+      converter.toText(note).includes(searchInput)
     );
     return searchResults;
   }
@@ -130,14 +127,17 @@ function App() {
         editorState={editorState}
         isCollapsed={sidebarIsCollapsed}
         collapseSidebar={collapseSidebar}
-        toggleThemesModal={toggleThemesModal}
+        toggleThemesModal={() => setThemeModalIsOpen(isOpen => !isOpen)}
         toggleBlockType={toggleBlockType}
         toggleInlineStyle={toggleInlineStyle}
         onChangeEditorState={onChangeEditorState}
         addNote={addNote}
         deleteNote={deleteNote}
       />
-      <ThemesModal isOpen={modalIsOpen} toggleThemesModal={toggleThemesModal} />
+      <ThemesModal
+        isOpen={themeModalIsOpen}
+        toggleThemesModal={() => setThemeModalIsOpen(isOpen => !isOpen)}
+      />
     </div>
   );
 }

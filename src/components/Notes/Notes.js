@@ -1,6 +1,5 @@
 import React from "react";
 import Note from "../Note/Note";
-import { converter } from "../../utils/utils";
 import "./Notes.scss";
 
 function Notes({ notes, openNote, currentNoteId }) {
@@ -9,8 +8,7 @@ function Notes({ notes, openNote, currentNoteId }) {
       {notes.length > 0 &&
         notes.map(note => (
           <Note
-            preview={converter.toText(note)}
-            title={note.title}
+            blocks={note.content.blocks}
             id={note.id}
             key={note.id}
             openNote={openNote}

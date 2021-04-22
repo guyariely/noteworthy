@@ -1,8 +1,9 @@
 import React from "react";
 
 const headers = [
-  { label: "Heading", style: "header-two" },
   { label: "Title", style: "header-one" },
+  { label: "Heading", style: "header-two" },
+  { label: "Body", style: "unstyled" },
 ];
 
 const HeadersDropdown = ({ activeBlock, toggleBlockType }) => {
@@ -12,7 +13,6 @@ const HeadersDropdown = ({ activeBlock, toggleBlockType }) => {
       onChange={e => toggleBlockType(e.target.value)}
       className="headersDropdown"
     >
-      <option value="">Body</option>
       {headers.map(heading => {
         return (
           <option value={heading.style} key={heading.style}>
