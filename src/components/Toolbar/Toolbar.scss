@@ -12,8 +12,8 @@
 
 .headersDropdown {
   background: transparent;
-  color: var(--toolbar-icons);
-  font-weight: 700;
+  color: var(--color-icons);
+  font-weight: bold;
   margin-right: 8px;
   border-style: none;
 
@@ -23,7 +23,7 @@
 }
 
 .style-button {
-  color: var(--toolbar-icons);
+  color: var(--color-icons);
   margin: 0 0.8rem;
   background: none;
   border-style: none;

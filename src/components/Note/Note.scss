@@ -7,20 +7,15 @@
 
   &.active {
     border-left: 4px solid var(--primary);
-    background: var(--notes-selection);
+    background: var(--primary-light);
   }
 }
 
 .note {
-  border-bottom: 0.8px solid var(--separator);
+  border-bottom: 0.8px solid var(--color-border);
   padding: 10px 1.2rem 10px 0;
   margin-left: 1.2rem;
-
   transition: border 0.1s ease-in-out;
-
-  &:hover {
-    border-bottom: 0.8px solid var(--notes-selection);
-  }
 }
 
 .note-title,

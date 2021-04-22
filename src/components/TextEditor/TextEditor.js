@@ -37,6 +37,7 @@ function TextEditor(props) {
           handleKeyCommand={cmd => handleKeyCommand(cmd)}
           keyBindingFn={keyBindingFn}
           onChange={props.onChangeEditorState}
+          readOnly={props.disable}
         />
       </main>
       <QuickAccess

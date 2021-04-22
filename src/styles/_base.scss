@@ -1,16 +1,14 @@
 html {
   background: var(--background);
-  color: var(--text);
+  color: var(--color-text);
   font-family: var(--font);
   font-size: 1.2rem;
 }
 
-// hiding scrollbars
 ::-webkit-scrollbar {
   display: none !important;
 }
 
-// hiding all the blue focus borders
 * :focus {
   outline: 0;
 }
@@ -21,17 +19,11 @@ h2 {
   margin-bottom: 0.8rem !important;
 }
 
-// gives all headings the theme's heading color
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: var(--heading);
-}
-
-// url isnt working, this should be in _ThemesModal.scss
-.theme.noteworthy {
-  background: url(../images/white-wall.png);
+  color: var(--color-text-secondary);
 }

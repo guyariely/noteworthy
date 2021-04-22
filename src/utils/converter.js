@@ -7,6 +7,11 @@ const converter = {
   },
   toText: note =>
     converter.toEditorState(note).getCurrentContent().getPlainText(),
+  toActiveBlockType: editorState =>
+    editorState
+      .getCurrentContent()
+      .getBlockForKey(editorState.getSelection().getStartKey())
+      .getType(),
 };
 
 export { converter };

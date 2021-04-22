@@ -1,7 +1,6 @@
 import React from "react";
 import Modal from "../Modal/Modal";
 import ThemePreview from "../ThemePreview/ThemesPreview";
-import { switchTheme } from "../../utils/utils";
 import "./ThemesModal.scss";
 
 const ThemesModal = props => {
@@ -23,13 +22,7 @@ const ThemesModal = props => {
           <h1 className="themes-title">Themes</h1>
           <div className="themes-previews">
             {themes.map(theme => {
-              return (
-                <ThemePreview
-                  key={theme}
-                  theme={theme}
-                  switchTheme={switchTheme}
-                />
-              );
+              return <ThemePreview key={theme} theme={theme} />;
             })}
           </div>
         </div>

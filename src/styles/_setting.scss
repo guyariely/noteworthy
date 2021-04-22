@@ -1,25 +1,145 @@
 :root {
-  --background: url(../images/white-wall.png);
-  --font: var(--san-serif);
-
-  --sidebar: rgb(252, 251, 247);
-  --notebooks-selection: rgba(214, 214, 214, 0.329);
-  --notes-selection: rgb(255, 233, 221);
-
-  --icons: #565656;
-  --toolbar-icons: rgb(77, 74, 71);
-  --separator: rgb(242, 237, 232);
-  --utils: #c0c0c0;
-
-  --heading: rgb(36, 35, 34);
-  --text: rgb(36, 35, 34);
-  --primary: rgb(239, 155, 110);
-  --highlight: rgb(255, 233, 221);
-  --code-color: rgb(36, 35, 34);
-  --code-background: rgb(235, 235, 235);
-
-  --border: 1px solid var(--separator);
-  --white-wall: url(../images/white-wall.png);
+  --border: 1px solid var(--color-border);
   --san-serif: "Nunito", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --serif: "Playfair Display", serif;
+
+  --background: url(../images/white-wall.png);
+  --font: var(--san-serif);
+  --modal-shadow: 0 0px 9px 0px #bfbfbf;
+  --color-text: rgb(36, 35, 34);
+  --color-text-secondary: rgb(36, 35, 34);
+  --color-icons: rgb(77, 74, 71);
+  --color-icons-light: #c0c0c0;
+  --color-border: rgb(242, 237, 232);
+  --primary: rgb(239, 155, 110);
+  --primary-light: rgb(255, 233, 221);
+  --color-code: rgb(36, 35, 34);
+  --color-code-background: rgb(235, 235, 235);
 }
+
+[data-theme="noteworthy"] {
+  --background: url(../images/white-wall.png);
+  --font: var(--san-serif);
+  --modal-shadow: 0 0px 9px 0px #bfbfbf;
+  --color-text: rgb(36, 35, 34);
+  --color-text-secondary: rgb(36, 35, 34);
+  --color-icons: rgb(77, 74, 71);
+  --color-icons-light: #c0c0c0;
+  --color-border: rgb(242, 237, 232);
+  --primary: rgb(239, 155, 110);
+  --primary-light: rgb(255, 233, 221);
+  --color-code: rgb(36, 35, 34);
+  --color-code-background: rgb(235, 235, 235);
+}
+
+[data-theme="eclipse"] {
+  --background: rgb(46, 50, 53);
+  --font: var(--san-serif);
+  --modal-shadow: 0 0px 15px 0px #2a2a2a;
+  --color-text: rgb(225, 225, 225);
+  --color-text-secondary: rgb(225, 225, 225);
+  --color-icons: rgb(218, 218, 218);
+  --color-icons-light: #c0c0c0;
+  --color-border: #2b2b2b;
+  --primary: rgb(239, 155, 110);
+  --primary-light: rgb(106, 106, 106);
+  --color-code: rgb(235, 235, 235);
+  --color-code-background: rgb(75, 75, 75);
+}
+
+[data-theme="bloom"] {
+  --background: #fff;
+  --font: var(--san-serif);
+  --modal-shadow: 0 0px 9px 0px #bfbfbf;
+  --color-text: #222;
+  --color-text-secondary: #222;
+  --color-icons: rgb(77, 74, 71);
+  --color-icons-light: #c0c0c0;
+  --color-border: rgb(242, 237, 232);
+  --primary: #ffa7c4;
+  --primary-light: #ffd3ef;
+  --color-code: #1a1a1a;
+  --color-code-background: rgba(255, 229, 100, 0.2);
+}
+
+[data-theme="gloom"] {
+  --background: #282c35;
+  --font: var(--san-serif);
+  --modal-shadow: 0 0px 20px 0px #191919;
+  --color-icons: var(--color-text);
+  --toolbar-icons: var(--color-text);
+  --color-border: hsla(0, 0%, 44%, 0.2);
+  --color-icons-light: #c0c0c0;
+  --color-text-secondary: hsla(0, 0%, 100%, 0.88);
+  --color-text: hsla(0, 0%, 100%, 0.88);
+  --primary: #ffa7c4;
+  --primary-light: #493943;
+  --color-code: #f3a0bf;
+  --color-code-background: #011627;
+}
+
+[data-theme="solarized"] {
+  --background: rgb(253, 246, 227);
+  --font: var(--san-serif);
+  --modal-shadow: 0 0px 9px 0px #bfbfbf;
+  --color-icons: #565656;
+  --toolbar-icons: rgb(77, 74, 71);
+  --color-border: rgb(242, 237, 232);
+  --color-icons-light: #c0c0c0;
+  --color-text-secondary: rgb(66, 85, 89);
+  --color-text: rgb(36, 35, 34);
+  --primary: rgb(178, 138, 28);
+  --primary-light: rgb(255, 236, 174);
+  --color-code: rgb(210, 226, 228);
+  --color-code-background: rgb(0, 43, 54);
+}
+
+[data-theme="newspaper"] {
+  --background: #fff;
+  --font: var(--serif);
+  --modal-shadow: 0 0px 9px 0px #bfbfbf;
+  --color-icons: #565656;
+  --toolbar-icons: rgb(77, 74, 71);
+  --color-border: rgb(242, 237, 232);
+  --color-icons-light: #c0c0c0;
+  --color-text-secondary: #222;
+  --color-text: #222;
+  --primary: #03a87c;
+  --primary-light: #00ffbb;
+  --color-code: rgb(36, 35, 34);
+  --color-code-background: rgb(235, 235, 235);
+}
+
+[data-theme="raspberry"] {
+  --background: rgb(251, 251, 251);
+  --font: var(--san-serif);
+  --modal-shadow: 0 0px 9px 0px #bfbfbf;
+  --color-icons: #565656;
+  --toolbar-icons: rgb(77, 74, 71);
+  --color-border: rgb(242, 237, 232);
+  --color-icons-light: #c0c0c0;
+  --color-text-secondary: rgb(36, 35, 34);
+  --color-text: rgb(36, 35, 34);
+  --primary: #e53b3b;
+  --primary-light: #ff9797;
+  --color-code: rgb(36, 35, 34);
+  --color-code-background: rgb(235, 235, 235);
+}
+
+[data-theme="ocean"] {
+  --background: rgb(251, 251, 251);
+  --font: var(--san-serif);
+  --modal-shadow: 0 0px 9px 0px #bfbfbf;
+  --color-icons: #565656;
+  --toolbar-icons: rgb(77, 74, 71);
+  --color-border: rgb(242, 237, 232);
+  --color-icons-light: #c0c0c0;
+  --color-text-secondary: rgb(36, 35, 34);
+  --color-text: rgb(36, 35, 34);
+  --primary: #1cb0f6;
+  --primary-light: #bce9ff;
+  --color-code: rgb(36, 35, 34);
+  --color-code-background: rgb(235, 235, 235);
+}
+
+// 6. use the color by theme variables in the theme-preview component (use a Sass function)

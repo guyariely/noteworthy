@@ -12,14 +12,14 @@ const inlineTypes = [
 
 export const styleMap = {
   CODE: {
-    color: "var(--code-color)",
+    color: "var(--color-code)",
     fontFamily: "monospace",
     borderRadius: "2px",
-    background: "var(--code-background)",
+    background: "var(--color-code-background)",
     padding: "3px 5px",
   },
   HIGHLIGHT: {
-    background: "var(--highlight)",
+    background: "var(--primary-light)",
     padding: "1px 5px",
   },
   UNDERLINE: {

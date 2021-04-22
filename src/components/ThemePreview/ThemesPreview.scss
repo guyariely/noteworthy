@@ -1,15 +1,12 @@
 .theme-preview {
-  border: 1px solid var(--separator);
+  border: var(--border);
   border-radius: 5px;
   padding: 0.8rem;
   margin-bottom: 1.2rem;
   line-height: 1.6;
 
-  p {
-    margin: 0;
-  }
-
-  h3 {
+  .preview-heading,
+  .preview-text {
     margin: 0;
   }
 
@@ -28,12 +25,12 @@
   }
 
   &:hover {
-    // box-shadow: 3px 3px 5px 6px #ccc;
     cursor: pointer;
   }
 }
 
 .theme-preview.noteworthy {
+  background: url("./white-wall.png");
   color: rgb(36, 35, 34);
   font-family: var(--san-serif);
 
