@@ -3,8 +3,8 @@ import TextEditor from "../TextEditor/TextEditor";
 import Sidebar from "../Sidebar/Sidebar";
 import ThemesModal from "../ThemesModal/ThemesModal";
 import { converter } from "../../utils/utils";
-import "./App.scss";
 import { useEditor } from "../../hooks/hooks";
+import "./App.scss";
 
 function App() {
   const [searchInput, setSearchInput] = useState("");

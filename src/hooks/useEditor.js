@@ -32,6 +32,7 @@ function useEditor() {
     if (notes.length > 0) {
       updateNote(editorState);
     }
+    console.log(converter.toContent(editorState));
   }, [editorState]);
 
   function updateNote(editorState) {
