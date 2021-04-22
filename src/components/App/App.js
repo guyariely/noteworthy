@@ -18,7 +18,7 @@ function App() {
 
   function getSearchResults() {
     const searchResults = editor.notes.filter(note =>
-      converter.toText(note).includes(searchInput)
+      converter.toText(note).toLowerCase().includes(searchInput.toLowerCase())
     );
     return searchResults;
   }
