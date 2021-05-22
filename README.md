@@ -6,6 +6,8 @@ Written in React and powered by Draft.js
 
 [Link to the website](https://noteworthy-app.netlify.app/)
 
-<img width="1176" alt="Screen Shot 2021-04-22 at 22 38 12" src="https://user-images.githubusercontent.com/42813496/115778813-e02c1b00-a3bf-11eb-8c97-ac56831aa193.png">
+![Screen Shot 2021-05-22 at 11 54 34](https://user-images.githubusercontent.com/42813496/119220712-8325a100-baf4-11eb-9ecf-6706241004c3.png)
 
-<img width="1142" alt="Screen Shot 2021-04-23 at 0 03 47" src="https://user-images.githubusercontent.com/42813496/115785034-9b0be700-a3c7-11eb-9dc6-be91080d4ca5.png">
+![Screen Shot 2021-05-22 at 11 54 38](https://user-images.githubusercontent.com/42813496/119220714-8751be80-baf4-11eb-9dd3-5f2d4bc78223.png)
+
+![Screen Shot 2021-05-22 at 11 54 43](https://user-images.githubusercontent.com/42813496/119220713-8456ce00-baf4-11eb-9bfd-6a453476c3df.png)
