@@ -7,9 +7,7 @@ import defaultNotes from "../defaultNotes";
 function useEditor() {
   const [notes, setNotes] = useState([]);
   const [currentNoteId, setCurrentNoteId] = useState(null);
-  const [editorState, setEditorState] = useState(() =>
-    EditorState.createEmpty()
-  );
+  const [editorState, setEditorState] = useState(EditorState.createEmpty());
 
   useEffect(() => {
     const savedNotes = JSON.parse(localStorage.getItem("notes"));
@@ -32,7 +30,6 @@ function useEditor() {
     if (notes.length > 0) {
       updateNote(editorState);
     }
-    console.log(converter.toContent(editorState));
   }, [editorState]);
 
   function updateNote(editorState) {
