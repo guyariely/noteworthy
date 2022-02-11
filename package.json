@@ -9,7 +9,7 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "draft-js": "0.10.5",
     "immutable": "4.0.0-rc.12",
-    "node-sass": "4.12.0",
+    "node-sass": "7.0.0",
     "normalize.css": "8.0.1",
     "react": "16.8.6",
     "react-dom": "16.8.6",
